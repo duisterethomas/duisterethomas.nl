@@ -1,0 +1,74 @@
+---
+import Icon from './Icon.astro';
+
+const { href, icon, label, color } = Astro.props;
+---
+
+<a href={href} class="tooltip" target="_blank">
+	<span class="tooltiptext">
+		{label}
+	</span>
+	<div class="icon">
+		<Icon icon={icon} />
+	</div>
+</a>
+
+<style define:vars={{ color }}>
+	a {
+		display: flex;
+		position: relative;
+		padding: var(--icon-padding);
+		text-decoration: none;
+		color: var(--color-gray-0);
+		transition: color var(--theme-transition);
+	}
+	
+	a:hover,
+	a:focus {
+		color: var(--accent-text-over);
+	}
+
+	.icon {
+		color: var(--color);
+		transition: color var(--theme-transition);
+	}
+
+	a:hover .icon,
+	a:focus .icon {
+		color: var(--accent-text-over);
+	}
+
+	.tooltip .tooltiptext {
+    	pointer-events: none;
+		opacity: 0;
+		transition: opacity var(--theme-transition);
+		background-color: var(--gray-999);
+		text-align: center;
+		padding: 5px;
+		border-radius: 6px;
+		font-size: small;
+		top: 100%;
+		left: 50%;
+    	transform: translateX(-50%);
+		
+		position: absolute;
+		z-index: 1;
+		}
+	
+	.tooltip .tooltiptext::after {
+		content: "";
+		position: absolute;
+		bottom: 100%;
+		left: 50%;
+		margin-left: -5px;
+		border-width: 5px;
+		border-style: solid;
+		border-color: transparent transparent var(--gray-999) transparent;
+	}
+
+	.tooltip:hover .tooltiptext,
+	.tooltip:focus .tooltiptext {
+		transition-delay: 0.5s;
+		opacity: 1;
+	}
+</style>
