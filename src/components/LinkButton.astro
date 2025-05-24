@@ -1,0 +1,38 @@
+---
+interface Props {
+	href: string,
+	newtab?: boolean;
+}
+
+const { href, newtab } = Astro.props;
+---
+
+{newtab ? <a href={href} target="_blank"><slot /></a> : <a href={href}><slot /></a>}
+
+<style>
+	a {
+		position: relative;
+		display: flex;
+		place-content: center;
+		text-align: center;
+		font-size: var(--text-xl);
+		padding: 0.5rem 4rem;
+		width: fit-content;
+		color: var(--accent-text-over);
+		text-decoration: none;
+		border-radius: 999rem;
+		overflow: hidden;
+		background: var(--accent-regular);
+		box-shadow: var(--shadow-md);
+		white-space: nowrap;
+		border-width: 5px;
+		border-color: transparent;
+		transition: border-color var(--theme-transition);
+	}
+
+	a:focus,
+	a:hover {
+		color: var(--accent-text-over);
+		border-color: var(--accent-text-over);
+	}
+</style>
