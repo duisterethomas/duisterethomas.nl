@@ -1,15 +1,23 @@
 ---
+import { iconPaths } from './IconPaths';
+import Icon from './Icon.astro';
+
 interface Props {
 	href: string,
-	newtab?: boolean;
+	newtab?: boolean,
+	color?: string,
+	icon?: keyof typeof iconPaths;
 }
 
-const { href, newtab } = Astro.props;
+const { href, newtab, color = "var(--accent-regular)", icon } = Astro.props;
 ---
 
-{newtab ? <a href={href} target="_blank"><slot /></a> : <a href={href}><slot /></a>}
+<a href={href} target={newtab ? "_blank" : ""}>
+	{icon && <div class="icon"><Icon icon={icon} /></div>}
+	<slot />
+</a>
 
-<style>
+<style define:vars={{ color }}>
 	a {
 		position: relative;
 		display: flex;
@@ -22,7 +30,7 @@ const { href, newtab } = Astro.props;
 		text-decoration: none;
 		border-radius: 999rem;
 		overflow: hidden;
-		background: var(--accent-regular);
+		background: var(--color);
 		box-shadow: var(--shadow-md);
 		white-space: nowrap;
 		border-width: 5px;
@@ -34,5 +42,10 @@ const { href, newtab } = Astro.props;
 	a:hover {
 		color: var(--accent-text-over);
 		border-color: var(--accent-text-over);
+	}
+
+	.icon {
+		margin: auto;
+		margin-right: 0.3em;
 	}
 </style>
