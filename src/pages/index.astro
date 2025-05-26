@@ -5,6 +5,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 // Import components
 import { YouTube } from '@astro-community/astro-embed-youtube';
 
+import { socialLinks } from '../components/SocialLinks';
 import LinkButton from '../components/LinkButton.astro'
 ---
 
@@ -27,7 +28,7 @@ import LinkButton from '../components/LinkButton.astro'
 			<YouTube class="youtube" id="https://www.youtube.com/watch?v=bVWIpXIUsLI" posterQuality="max" />
 			<div id="yt-details">
 				<h4>Mijn meest recente YouTube video</h4>
-				<div id="yt-button"><LinkButton href="https://www.youtube.com/@Duisterethomas/" newtab>Abonneer</LinkButton></div>
+				<div id="yt-button"><LinkButton href={socialLinks["youtube"]["href"]} newtab color={socialLinks["youtube"]["color"]} icon={socialLinks["youtube"]["icon"]}>Abonneer</LinkButton></div>
 			</div>
 		</div>
 	</div>
