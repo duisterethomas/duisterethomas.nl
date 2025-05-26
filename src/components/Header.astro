@@ -1,5 +1,6 @@
 ---
 import type { iconPaths } from './IconPaths';
+import { socialLinks } from './SocialLinks';
 import { Image } from 'astro:assets';
 import LogoImage from '../images/Duisterethomas-Logo.png'
 import Social from './Social.astro';
@@ -12,14 +13,14 @@ const textLinks: { label: string; href: string }[] = [
 
 /** Icon links to social media */
 const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths; color: string }[] = [
-	{ label: 'YouTube', href: 'https://www.youtube.com/@Duisterethomas/', icon: 'youtube-logo', color: '#FF0000' },
-	{ label: 'SoundCloud', href: 'https://soundcloud.com/duisterethomas', icon: 'soundcloud-logo', color: '#FF5500' },
-	{ label: 'Modrinth', href: 'https://www.modrinth.com/user/duisterethomas', icon: 'modrinth-logo', color: '#00AF5C' },
-	{ label: 'GitHub', href: 'https://github.com/duisterethomas', icon: 'github-logo', color: '#FFFFFF' },
-	{ label: 'Itch.io', href: 'https://duisterethomas.itch.io/', icon: 'itch.io-logo', color: '#FA5C5C' },
-	{ label: 'Game Jolt', href: 'https://gamejolt.com/@duisterethomas', icon: 'gamejolt-logo', color: '#CCFF00' },
-	{ label: 'Twitch', href: 'https://www.twitch.tv/duisterethomas', icon: 'twitch-logo', color: '#9146FF' },
-	{ label: 'Reddit', href: 'https://www.reddit.com/r/duisterethomas/', icon: 'reddit-logo', color: '#FF4500' },
+	socialLinks["youtube"],
+	socialLinks["soundcloud"],
+	socialLinks["modrinth"],
+	socialLinks["github"],
+	socialLinks["itchio"],
+	socialLinks["gamejolt"],
+	socialLinks["twitch"],
+	socialLinks["reddit"],
 ];
 
 /** Test if a link is pointing to the current page. */
