@@ -13,7 +13,7 @@ import LinkButton from '../components/LinkButton.astro'
 	<div id="section-1">
 		<div class="wrapper">
 
-			<div class="hero">
+			<div id="hero-1">
 				<div class="stack gap-2">
 					<h1 class="title">Hej, dit is niet de IKEA</h1>
 					<p>Dit is namelijk <a href="https://duisterethomas.nl">duisterethomas.nl</a></p>
@@ -32,6 +32,26 @@ import LinkButton from '../components/LinkButton.astro'
 			</div>
 		</div>
 	</div>
+	
+	<div id="section-3">
+		<div class="wrapper">
+
+			<div id="hero-3">
+				<div class="stack gap-2">
+					<h1 class="title">Mijn muziek</h1>
+					<p>Vaak gebruik ik mijn nummers als achtergrondmuziek in mijn <a href={socialLinks["youtube"]["href"]}>YouTube video's</a></p>
+					<LinkButton href={socialLinks["soundcloud"]["href"]} newtab color={socialLinks["soundcloud"]["color"]} icon={socialLinks["soundcloud"]["icon"]}>Meer muziek</LinkButton>
+				</div>
+
+				<div class="stack gap-1">
+					<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1987020695&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-149794833" title="Duisterethomas" target="_blank" style="color: #cccccc; text-decoration: none;">Duisterethomas</a> · <a href="https://soundcloud.com/user-149794833/path-to-the-future" title="Path to the Future" target="_blank" style="color: #cccccc; text-decoration: none;">Path to the Future</a></div>
+					<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1933724864&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-149794833" title="Duisterethomas" target="_blank" style="color: #cccccc; text-decoration: none;">Duisterethomas</a> · <a href="https://soundcloud.com/user-149794833/futuristic-vibes" title="Futuristic Vibes" target="_blank" style="color: #cccccc; text-decoration: none;">Futuristic Vibes</a></div>
+					<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1843120572&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-149794833" title="Duisterethomas" target="_blank" style="color: #cccccc; text-decoration: none;">Duisterethomas</a> · <a href="https://soundcloud.com/user-149794833/rulers-rule" title="Rulers Rule" target="_blank" style="color: #cccccc; text-decoration: none;">Rulers Rule</a></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
 </BaseLayout>
 
 <style>
@@ -42,7 +62,7 @@ import LinkButton from '../components/LinkButton.astro'
 		background-size: cover;
 	}
 
-	.hero {
+	#hero-1 {
 		font-size: var(--text-xl);
 		text-align: start;
 		display: grid;
@@ -79,5 +99,24 @@ import LinkButton from '../components/LinkButton.astro'
 
 	#yt-button {
 		justify-self: end;
+	}
+
+	/* ====================================================== */
+
+	#section-3 {
+		padding-top: 8rem;
+		padding-bottom: 7rem;
+		background: url('/assets/backgrounds/Ableton-live-it-doesnt-end-here.webp') center center;
+		background-size: cover;
+	}
+
+	#hero-3 {
+		font-size: var(--text-xl);
+		text-align: start;
+		display: grid;
+		gap: 3.75rem;
+		grid-template-columns: 1fr 1fr;
+		padding-inline: 2.5rem;
+		align-items: center;
 	}
 </style>
