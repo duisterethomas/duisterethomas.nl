@@ -66,7 +66,7 @@ body {
 
 body {
 	background-color: var(--gray-999);
-	color: var(--gray-200);
+	color: var(--gray-100);
 	font-family: var(--font-body);
 	font-weight: 400;
 	-webkit-font-smoothing: antialiased;
