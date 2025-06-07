@@ -27,7 +27,7 @@ import LinkButton from '../components/LinkButton.astro'
 		<div class="wrapper">
 			<YouTube class="youtube" id="https://www.youtube.com/watch?v=bVWIpXIUsLI" posterQuality="max" />
 			<div id="yt-details">
-				<h4>Mijn meest recente YouTube video</h4>
+				<h4 id="yt-title">Mijn meest recente YouTube video</h4>
 				<div id="yt-button"><LinkButton href={socialLinks["youtube"]["href"]} newtab color={socialLinks["youtube"]["color"]} icon={socialLinks["youtube"]["icon"]}>Abonneer</LinkButton></div>
 			</div>
 		</div>
@@ -95,6 +95,10 @@ import LinkButton from '../components/LinkButton.astro'
 		display: grid;
 		grid-template-columns: auto auto;
 		align-items: center;
+	}
+
+	#yt-title {
+		color: var(--gray-0);
 	}
 
 	#yt-button {
