@@ -52,6 +52,20 @@ import LinkButton from '../components/LinkButton.astro'
 
 		</div>
 	</div>
+	
+	<div class="section" id="section-4">
+		<div class="wrapper">
+
+			<div id="hero-4">
+				<div class="stack gap-2">
+					<h1 class="title">Pancake Mod</h1>
+					<p>Ik heb een Minecraft mod gemaakt, een zéér essentiële mod: de <a href="https://modrinth.com/mod/pancakemod">Pancake Mod</a>. Dat is een mod die Nederlandse pannenkoeken toevoegd aan Minecraft, wie wil dat nou niet?</p>
+					<div id="modrinth-button"><LinkButton href={socialLinks["modrinth"]["href"]} newtab color={socialLinks["modrinth"]["color"]} icon={socialLinks["modrinth"]["icon"]}>Mijn mods</LinkButton></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
 </BaseLayout>
 
 <style>
@@ -119,5 +133,28 @@ import LinkButton from '../components/LinkButton.astro'
 		grid-template-columns: 1fr 1fr;
 		padding-inline: 2.5rem;
 		align-items: center;
+	}
+
+	/* ====================================================== */
+
+	#section-4 {
+		padding-top: 10rem;
+		padding-bottom: 10rem;
+		padding-inline: 22rem;
+		background: url('/assets/backgrounds/Pancake-Mod.webp') center center;
+		background-size: cover;
+	}
+
+	#hero-4 {
+		font-size: var(--text-xl);
+		text-align: center;
+		gap: 3.75rem;
+		padding-inline: 2.5rem;
+		align-items: center;
+	}
+
+	#modrinth-button {
+		align-self: center;
+		margin-top: 0.5rem;
 	}
 </style>
