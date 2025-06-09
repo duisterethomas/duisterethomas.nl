@@ -10,5 +10,6 @@
                 "parser": "astro"
             }
         }
-    ]
+    ],
+    "tabWidth": 4
 }
