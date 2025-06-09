@@ -3,33 +3,33 @@ import type { iconPaths } from "./IconPaths";
 import Icon from "./Icon.astro";
 
 interface Props {
-  href: string;
-  newtab?: boolean;
-  color?: string;
-  icon?: keyof typeof iconPaths;
+    href: string;
+    newtab?: boolean;
+    color?: string;
+    icon?: keyof typeof iconPaths;
 }
 
 const { href, newtab, color = "var(--accent-regular)", icon } = Astro.props;
 ---
 
 <a
-  class="relative flex w-fit content-center overflow-hidden rounded-full border-5 border-transparent px-16 py-2 text-center text-xl whitespace-nowrap text-white shadow-md shadow-gray-800 text-shadow-none hover:border-white hover:text-white"
-  href={href}
-  target={newtab ? "_blank" : ""}
+    class="relative flex w-fit content-center overflow-hidden rounded-full border-5 border-transparent px-12 py-2 text-center text-xl whitespace-nowrap text-white shadow-md shadow-gray-800 text-shadow-none hover:border-white hover:text-white"
+    href={href}
+    target={newtab ? "_blank" : ""}
 >
-  {
-    icon && (
-      <div class="m-auto mr-2">
-        <Icon icon={icon} />
-      </div>
-    )
-  }
-  <slot />
+    {
+        icon && (
+            <div class="m-auto mr-2">
+                <Icon icon={icon} />
+            </div>
+        )
+    }
+    <slot />
 </a>
 
 <style define:vars={{ color }}>
-  a {
-    background: var(--color);
-    transition: border-color var(--theme-transition);
-  }
+    a {
+        background: var(--color);
+        transition: border-color var(--theme-transition);
+    }
 </style>
