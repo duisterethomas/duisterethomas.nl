@@ -1,52 +1,35 @@
 ---
-import type { iconPaths } from './IconPaths';
-import Icon from './Icon.astro';
+import type { iconPaths } from "./IconPaths";
+import Icon from "./Icon.astro";
 
 interface Props {
-	href: string,
-	newtab?: boolean,
-	color?: string,
-	icon?: keyof typeof iconPaths;
+  href: string;
+  newtab?: boolean;
+  color?: string;
+  icon?: keyof typeof iconPaths;
 }
 
 const { href, newtab, color = "var(--accent-regular)", icon } = Astro.props;
 ---
 
-<a href={href} target={newtab ? "_blank" : ""}>
-	{icon && <div class="icon"><Icon icon={icon} /></div>}
-	<slot />
+<a
+  class="relative flex w-fit content-center overflow-hidden rounded-full border-5 border-transparent px-16 py-2 text-center text-xl whitespace-nowrap text-white shadow-md shadow-gray-800 text-shadow-none hover:border-white hover:text-white"
+  href={href}
+  target={newtab ? "_blank" : ""}
+>
+  {
+    icon && (
+      <div class="m-auto mr-2">
+        <Icon icon={icon} />
+      </div>
+    )
+  }
+  <slot />
 </a>
 
 <style define:vars={{ color }}>
-	a {
-		position: relative;
-		display: flex;
-		place-content: center;
-		text-align: center;
-		font-size: var(--text-xl);
-		padding: 0.5rem 4rem;
-		width: fit-content;
-		color: var(--accent-text-over);
-		text-decoration: none;
-		border-radius: 999rem;
-		overflow: hidden;
-		background: var(--color);
-		white-space: nowrap;
-		border-width: 5px;
-		border-color: transparent;
-		transition: border-color var(--theme-transition);
-		text-shadow: none;
-		box-shadow: 2px 2px 4px #000000;
-	}
-
-	a:focus,
-	a:hover {
-		color: var(--accent-text-over);
-		border-color: var(--accent-text-over);
-	}
-
-	.icon {
-		margin: auto;
-		margin-right: 0.3em;
-	}
+  a {
+    background: var(--color);
+    transition: border-color var(--theme-transition);
+  }
 </style>
