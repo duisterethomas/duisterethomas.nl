@@ -1,97 +1,260 @@
 ---
 // Import the layout
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
 // Import components
-import { YouTube } from '@astro-community/astro-embed-youtube';
+import { YouTube } from "@astro-community/astro-embed-youtube";
 
-import { socialLinks } from '../components/SocialLinks';
-import LinkButton from '../components/LinkButton.astro'
+import { socialLinks } from "../components/SocialLinks";
+import LinkButton from "../components/LinkButton.astro";
 ---
 
 <BaseLayout>
-	<div class="pt-72 pb-60" id="section-1">
-		<div class="wrapper">
+    <div class="pt-72 pb-60" id="section-1">
+        <div class="wrapper">
+            <div class="grid w-3xl gap-14 px-10 text-start text-xl">
+                <div class="flex flex-col gap-2">
+                    <h1>Hej, dit is niet de IKEA</h1>
+                    <p>
+                        Dit is namelijk <a href="https://duisterethomas.nl"
+                            >duisterethomas.nl</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-			<div class="text-xl text-start grid gap-14 px-10 w-3xl">
-				<div class="flex flex-col gap-2">
-					<h1>Hej, dit is niet de IKEA</h1>
-					<p>Dit is namelijk <a href="https://duisterethomas.nl">duisterethomas.nl</a></p>
-				</div>
-			</div>
+    <div class="py-40" id="section-2">
+        <div class="wrapper">
+            <YouTube
+                class="min-w-full rounded-2xl shadow-md shadow-gray-800"
+                id="https://www.youtube.com/watch?v=bVWIpXIUsLI"
+                posterQuality="max"
+            />
+            <div class="mt-4 grid grid-cols-2 items-center">
+                <h4>Mijn meest recente YouTube video</h4>
+                <div class="justify-self-end">
+                    <LinkButton
+                        href={socialLinks["youtube"]["href"]}
+                        newtab
+                        color={socialLinks["youtube"]["color"]}
+                        icon={socialLinks["youtube"]["icon"]}
+                        >Abonneer</LinkButton>
+                </div>
+            </div>
+        </div>
+    </div>
 
-		</div>
-	</div>
+    <div class="py-32" id="section-3">
+        <div class="wrapper">
+            <div
+                class="grid grid-cols-2 items-center gap-14 px-10 text-start text-xl"
+            >
+                <div class="flex flex-col gap-2">
+                    <h1>Mijn muziek</h1>
+                    <p>
+                        Vaak gebruik ik mijn nummers als achtergrondmuziek in
+                        mijn <a href={socialLinks["youtube"]["href"]}
+                            >YouTube video's</a>
+                    </p>
+                    <LinkButton
+                        href={socialLinks["soundcloud"]["href"]}
+                        newtab
+                        color={socialLinks["soundcloud"]["color"]}
+                        icon={socialLinks["soundcloud"]["icon"]}
+                        >Meer muziek</LinkButton
+                    >
+                </div>
 
-	<div class="py-40" id="section-2">
-		<div class="wrapper">
-			<YouTube class="rounded-2xl min-w-full shadow-md shadow-gray-800" id="https://www.youtube.com/watch?v=bVWIpXIUsLI" posterQuality="max" />
-			<div class="grid grid-cols-2 items-center mt-4">
-				<h4>Mijn meest recente YouTube video</h4>
-				<div class="justify-self-end"><LinkButton href={socialLinks["youtube"]["href"]} newtab color={socialLinks["youtube"]["color"]} icon={socialLinks["youtube"]["icon"]}>Abonneer</LinkButton></div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="py-32" id="section-3">
-		<div class="wrapper">
+                <div class="flex flex-col gap-1">
+                    <iframe
+                        width="100%"
+                        height="166"
+                        scrolling="no"
+                        frameborder="no"
+                        allow="autoplay"
+                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1987020695&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+                    ></iframe><div
+                        style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"
+                    >
+                        <a
+                            href="https://soundcloud.com/user-149794833"
+                            title="Duisterethomas"
+                            target="_blank"
+                            style="color: #cccccc; text-decoration: none;"
+                            >Duisterethomas</a
+                        > · <a
+                            href="https://soundcloud.com/user-149794833/path-to-the-future"
+                            title="Path to the Future"
+                            target="_blank"
+                            style="color: #cccccc; text-decoration: none;"
+                            >Path to the Future</a>
+                    </div>
+                    <iframe
+                        width="100%"
+                        height="166"
+                        scrolling="no"
+                        frameborder="no"
+                        allow="autoplay"
+                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1933724864&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+                    ></iframe><div
+                        style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"
+                    >
+                        <a
+                            href="https://soundcloud.com/user-149794833"
+                            title="Duisterethomas"
+                            target="_blank"
+                            style="color: #cccccc; text-decoration: none;"
+                            >Duisterethomas</a
+                        > · <a
+                            href="https://soundcloud.com/user-149794833/futuristic-vibes"
+                            title="Futuristic Vibes"
+                            target="_blank"
+                            style="color: #cccccc; text-decoration: none;"
+                            >Futuristic Vibes</a>
+                    </div>
+                    <iframe
+                        width="100%"
+                        height="166"
+                        scrolling="no"
+                        frameborder="no"
+                        allow="autoplay"
+                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1843120572&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+                    ></iframe><div
+                        style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"
+                    >
+                        <a
+                            href="https://soundcloud.com/user-149794833"
+                            title="Duisterethomas"
+                            target="_blank"
+                            style="color: #cccccc; text-decoration: none;"
+                            >Duisterethomas</a
+                        > · <a
+                            href="https://soundcloud.com/user-149794833/rulers-rule"
+                            title="Rulers Rule"
+                            target="_blank"
+                            style="color: #cccccc; text-decoration: none;"
+                            >Rulers Rule</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-			<div class="text-xl text-start grid gap-14 grid-cols-2 items-center px-10">
-				<div class="flex flex-col gap-2">
-					<h1>Mijn muziek</h1>
-					<p>Vaak gebruik ik mijn nummers als achtergrondmuziek in mijn <a href={socialLinks["youtube"]["href"]}>YouTube video's</a></p>
-					<LinkButton href={socialLinks["soundcloud"]["href"]} newtab color={socialLinks["soundcloud"]["color"]} icon={socialLinks["soundcloud"]["icon"]}>Meer muziek</LinkButton>
-				</div>
+    <div class="py-40" id="section-4">
+        <div class="wrapper">
+            <div class="items-center gap-14 px-64 text-center text-xl">
+                <div class="flex flex-col gap-2">
+                    <h1>Pancake Mod</h1>
+                    <p>
+                        Ik heb een Minecraft mod gemaakt, een zéér essentiële
+                        mod: de <a href="https://modrinth.com/mod/pancakemod"
+                            >Pancake Mod</a
+                        >. Dat is een mod die Nederlandse pannenkoeken toevoegd
+                        aan Minecraft, wie wil dat nou niet?
+                    </p>
+                    <div class="mt-2 self-center">
+                        <LinkButton
+                            href={socialLinks["modrinth"]["href"]}
+                            newtab
+                            color={socialLinks["modrinth"]["color"]}
+                            icon={socialLinks["modrinth"]["icon"]}
+                            >Mijn mods</LinkButton>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-				<div class="flex flex-col gap-1">
-					<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1987020695&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-149794833" title="Duisterethomas" target="_blank" style="color: #cccccc; text-decoration: none;">Duisterethomas</a> · <a href="https://soundcloud.com/user-149794833/path-to-the-future" title="Path to the Future" target="_blank" style="color: #cccccc; text-decoration: none;">Path to the Future</a></div>
-					<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1933724864&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-149794833" title="Duisterethomas" target="_blank" style="color: #cccccc; text-decoration: none;">Duisterethomas</a> · <a href="https://soundcloud.com/user-149794833/futuristic-vibes" title="Futuristic Vibes" target="_blank" style="color: #cccccc; text-decoration: none;">Futuristic Vibes</a></div>
-					<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1843120572&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-149794833" title="Duisterethomas" target="_blank" style="color: #cccccc; text-decoration: none;">Duisterethomas</a> · <a href="https://soundcloud.com/user-149794833/rulers-rule" title="Rulers Rule" target="_blank" style="color: #cccccc; text-decoration: none;">Rulers Rule</a></div>
-				</div>
-			</div>
+    <div class="py-40" id="section-5">
+        <div class="wrapper">
+            <div class="items-center gap-14 px-10 text-center text-xl">
+                <div class="flex flex-col gap-2 px-64">
+                    <h1>Programmeren</h1>
+                    <p>
+                        Ja dat is ook een hobby van mij. Zo heb ik bijvoorbeeld
+                        deze website helemaal zelf geprogrammeerd.
+                    </p>
+                </div>
+                <div class="mt-12 grid grid-cols-3 gap-8">
+                    <div
+                        class="flex flex-col justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700"
+                    >
+                        <h4>duisterethomas.nl</h4>
+                        <p>De source code van deze website.</p>
+                        <div class="mt-2 self-center">
+                            <LinkButton
+                                href="https://github.com/duisterethomas/duisterethomas.nl"
+                                newtab
+                                color="#181717"
+                                icon={socialLinks["github"]["icon"]}
+                                >duisterethomas.nl</LinkButton>
+                        </div>
+                    </div>
 
-		</div>
-	</div>
-	
-	<div class="py-40" id="section-4">
-		<div class="wrapper">
+                    <div
+                        class="flex flex-col justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700"
+                    >
+                        <h4>Rooster-EPD</h4>
+                        <p>
+                            Een klein e-Paper apparaatje waarop je je Zermelo
+                            rooster kunt zien.
+                        </p>
+                        <div class="mt-2 self-center">
+                            <LinkButton
+                                href="https://github.com/duisterethomas/rooster-epd"
+                                newtab
+                                color="#181717"
+                                icon={socialLinks["github"]["icon"]}
+                                >rooster-epd</LinkButton>
+                        </div>
+                    </div>
 
-			<div class="text-xl text-center gap-14 items-center px-64">
-				<div class="flex flex-col gap-2">
-					<h1>Pancake Mod</h1>
-					<p>Ik heb een Minecraft mod gemaakt, een zéér essentiële mod: de <a href="https://modrinth.com/mod/pancakemod">Pancake Mod</a>. Dat is een mod die Nederlandse pannenkoeken toevoegd aan Minecraft, wie wil dat nou niet?</p>
-					<div class="self-center mt-2"><LinkButton href={socialLinks["modrinth"]["href"]} newtab color={socialLinks["modrinth"]["color"]} icon={socialLinks["modrinth"]["icon"]}>Mijn mods</LinkButton></div>
-				</div>
-			</div>
-
-		</div>
-	</div>
+                    <div
+                        class="flex flex-col justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700"
+                    >
+                        <h4>Nog meer...</h4>
+                        <p>Zie al mijn repositories op GitHub.</p>
+                        <div class="mt-2 self-center">
+                            <LinkButton
+                                href={socialLinks["github"]["href"]}
+                                newtab
+                                color="#181717"
+                                icon={socialLinks["github"]["icon"]}
+                                >Repositories</LinkButton>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </BaseLayout>
 
 <style>
-	#section-1 {
-		background: url('/assets/backgrounds/background-1.jpg') center center;
-		background-size: cover;
-	}
+    #section-1 {
+        background: url("/assets/backgrounds/background-1.jpg") center center;
+        background-size: cover;
+    }
 
-	/* ====================================================== */
+    #section-2 {
+        background: url("/assets/backgrounds/background-2.jpg") center center;
+        background-size: cover;
+    }
 
-	#section-2 {
-		background: url('/assets/backgrounds/background-2.jpg') center center;
-		background-size: cover;
-	}
+    #section-3 {
+        background: url("/assets/backgrounds/Ableton-live-it-doesnt-end-here.webp")
+            center center;
+        background-size: cover;
+    }
 
-	/* ====================================================== */
+    #section-4 {
+        background: url("/assets/backgrounds/Pancake-Mod.webp") center center;
+        background-size: cover;
+    }
 
-	#section-3 {
-		background: url('/assets/backgrounds/Ableton-live-it-doesnt-end-here.webp') center center;
-		background-size: cover;
-	}
-
-	/* ====================================================== */
-
-	#section-4 {
-		background: url('/assets/backgrounds/Pancake-Mod.webp') center center;
-		background-size: cover;
-	}
+    #section-5 {
+        background: url("/assets/backgrounds/GitHub-Rooster-EPD.webp") top
+            center;
+        background-size: cover;
+    }
 </style>
