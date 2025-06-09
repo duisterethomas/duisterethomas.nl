@@ -10,12 +10,12 @@ import LinkButton from '../components/LinkButton.astro'
 ---
 
 <BaseLayout>
-	<div class="section" id="section-1">
+	<div class="pt-72 pb-60" id="section-1">
 		<div class="wrapper">
 
-			<div id="hero-1">
-				<div class="stack gap-2">
-					<h1 class="title">Hej, dit is niet de IKEA</h1>
+			<div class="text-xl text-start grid gap-14 px-10 w-3xl">
+				<div class="flex flex-col gap-2">
+					<h1>Hej, dit is niet de IKEA</h1>
 					<p>Dit is namelijk <a href="https://duisterethomas.nl">duisterethomas.nl</a></p>
 				</div>
 			</div>
@@ -23,27 +23,27 @@ import LinkButton from '../components/LinkButton.astro'
 		</div>
 	</div>
 
-	<div class="section" id="section-2">
+	<div class="py-40" id="section-2">
 		<div class="wrapper">
-			<YouTube class="youtube" id="https://www.youtube.com/watch?v=bVWIpXIUsLI" posterQuality="max" />
-			<div id="yt-details">
+			<YouTube class="rounded-2xl min-w-full shadow-md shadow-gray-800" id="https://www.youtube.com/watch?v=bVWIpXIUsLI" posterQuality="max" />
+			<div class="grid grid-cols-2 items-center mt-4">
 				<h4>Mijn meest recente YouTube video</h4>
-				<div id="yt-button"><LinkButton href={socialLinks["youtube"]["href"]} newtab color={socialLinks["youtube"]["color"]} icon={socialLinks["youtube"]["icon"]}>Abonneer</LinkButton></div>
+				<div class="justify-self-end"><LinkButton href={socialLinks["youtube"]["href"]} newtab color={socialLinks["youtube"]["color"]} icon={socialLinks["youtube"]["icon"]}>Abonneer</LinkButton></div>
 			</div>
 		</div>
 	</div>
 	
-	<div class="section" id="section-3">
+	<div class="py-32" id="section-3">
 		<div class="wrapper">
 
-			<div id="hero-3">
-				<div class="stack gap-2">
-					<h1 class="title">Mijn muziek</h1>
+			<div class="text-xl text-start grid gap-14 grid-cols-2 items-center px-10">
+				<div class="flex flex-col gap-2">
+					<h1>Mijn muziek</h1>
 					<p>Vaak gebruik ik mijn nummers als achtergrondmuziek in mijn <a href={socialLinks["youtube"]["href"]}>YouTube video's</a></p>
 					<LinkButton href={socialLinks["soundcloud"]["href"]} newtab color={socialLinks["soundcloud"]["color"]} icon={socialLinks["soundcloud"]["icon"]}>Meer muziek</LinkButton>
 				</div>
 
-				<div class="stack gap-1">
+				<div class="flex flex-col gap-1">
 					<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1987020695&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-149794833" title="Duisterethomas" target="_blank" style="color: #cccccc; text-decoration: none;">Duisterethomas</a> · <a href="https://soundcloud.com/user-149794833/path-to-the-future" title="Path to the Future" target="_blank" style="color: #cccccc; text-decoration: none;">Path to the Future</a></div>
 					<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1933724864&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-149794833" title="Duisterethomas" target="_blank" style="color: #cccccc; text-decoration: none;">Duisterethomas</a> · <a href="https://soundcloud.com/user-149794833/futuristic-vibes" title="Futuristic Vibes" target="_blank" style="color: #cccccc; text-decoration: none;">Futuristic Vibes</a></div>
 					<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1843120572&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/user-149794833" title="Duisterethomas" target="_blank" style="color: #cccccc; text-decoration: none;">Duisterethomas</a> · <a href="https://soundcloud.com/user-149794833/rulers-rule" title="Rulers Rule" target="_blank" style="color: #cccccc; text-decoration: none;">Rulers Rule</a></div>
@@ -53,14 +53,14 @@ import LinkButton from '../components/LinkButton.astro'
 		</div>
 	</div>
 	
-	<div class="section" id="section-4">
+	<div class="py-40" id="section-4">
 		<div class="wrapper">
 
-			<div id="hero-4">
-				<div class="stack gap-2">
-					<h1 class="title">Pancake Mod</h1>
+			<div class="text-xl text-center gap-14 items-center px-64">
+				<div class="flex flex-col gap-2">
+					<h1>Pancake Mod</h1>
 					<p>Ik heb een Minecraft mod gemaakt, een zéér essentiële mod: de <a href="https://modrinth.com/mod/pancakemod">Pancake Mod</a>. Dat is een mod die Nederlandse pannenkoeken toevoegd aan Minecraft, wie wil dat nou niet?</p>
-					<div id="modrinth-button"><LinkButton href={socialLinks["modrinth"]["href"]} newtab color={socialLinks["modrinth"]["color"]} icon={socialLinks["modrinth"]["icon"]}>Mijn mods</LinkButton></div>
+					<div class="self-center mt-2"><LinkButton href={socialLinks["modrinth"]["href"]} newtab color={socialLinks["modrinth"]["color"]} icon={socialLinks["modrinth"]["icon"]}>Mijn mods</LinkButton></div>
 				</div>
 			</div>
 
@@ -70,91 +70,28 @@ import LinkButton from '../components/LinkButton.astro'
 
 <style>
 	#section-1 {
-		padding-top: 17rem;
-		padding-bottom: 15rem;
 		background: url('/assets/backgrounds/background-1.jpg') center center;
 		background-size: cover;
-	}
-
-	#hero-1 {
-		font-size: var(--text-xl);
-		text-align: start;
-		display: grid;
-		gap: 3.75rem;
-		grid-template-columns: 6fr 4fr;
-		padding-inline: 2.5rem;
-	}
-
-	.title {
-		font-size: var(--text-5xl);
-		color: var(--gray-0);
 	}
 
 	/* ====================================================== */
 
 	#section-2 {
-		padding-top: 10rem;
-		padding-bottom: 10rem;
 		background: url('/assets/backgrounds/background-2.jpg') center center;
 		background-size: cover;
-	}
-
-	.youtube {
-		border-radius: 1rem;
-		min-width: 100%;
-		box-shadow: 2px 2px 4px #000000;
-	}
-
-	#yt-details {
-		margin-top: 1.2rem;
-		display: grid;
-		grid-template-columns: auto auto;
-		align-items: center;
-	}
-
-	#yt-button {
-		justify-self: end;
 	}
 
 	/* ====================================================== */
 
 	#section-3 {
-		padding-top: 8rem;
-		padding-bottom: 7rem;
 		background: url('/assets/backgrounds/Ableton-live-it-doesnt-end-here.webp') center center;
 		background-size: cover;
-	}
-
-	#hero-3 {
-		font-size: var(--text-xl);
-		text-align: start;
-		display: grid;
-		gap: 3.75rem;
-		grid-template-columns: 1fr 1fr;
-		padding-inline: 2.5rem;
-		align-items: center;
 	}
 
 	/* ====================================================== */
 
 	#section-4 {
-		padding-top: 10rem;
-		padding-bottom: 10rem;
-		padding-inline: 22rem;
 		background: url('/assets/backgrounds/Pancake-Mod.webp') center center;
 		background-size: cover;
-	}
-
-	#hero-4 {
-		font-size: var(--text-xl);
-		text-align: center;
-		gap: 3.75rem;
-		padding-inline: 2.5rem;
-		align-items: center;
-	}
-
-	#modrinth-button {
-		align-self: center;
-		margin-top: 0.5rem;
 	}
 </style>

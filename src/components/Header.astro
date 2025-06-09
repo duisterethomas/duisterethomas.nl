@@ -1,158 +1,119 @@
 ---
-import type { iconPaths } from './IconPaths';
-import { socialLinks } from './SocialLinks';
-import { Image } from 'astro:assets';
-import LogoImage from '../images/Duisterethomas-Logo.png'
-import Social from './Social.astro';
+import type { iconPaths } from "./IconPaths";
+import { socialLinks } from "./SocialLinks";
+import { Image } from "astro:assets";
+import LogoImage from "../images/Duisterethomas-Logo.png";
+import Social from "./Social.astro";
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-	{ label: 'Home', href: '/' },
-	{ label: 'Gear', href: '/gear' },
+  { label: "Home", href: "/" },
+  { label: "Gear", href: "/gear" },
 ];
 
 /** Icon links to social media */
-const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths; color: string }[] = [
-	socialLinks["youtube"],
-	socialLinks["soundcloud"],
-	socialLinks["modrinth"],
-	socialLinks["github"],
-	socialLinks["itchio"],
-	socialLinks["gamejolt"],
-	socialLinks["twitch"],
-	socialLinks["reddit"],
+const iconLinks: {
+  label: string;
+  href: string;
+  icon: keyof typeof iconPaths;
+  color: string;
+}[] = [
+  socialLinks["youtube"],
+  socialLinks["soundcloud"],
+  socialLinks["modrinth"],
+  socialLinks["github"],
+  socialLinks["itchio"],
+  socialLinks["gamejolt"],
+  socialLinks["twitch"],
+  socialLinks["reddit"],
 ];
 
 /** Test if a link is pointing to the current page. */
 const isCurrentPage = (href: string) => {
-	let pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
-	if (pathname.at(0) !== '/') pathname = '/' + pathname;
-	if (pathname.at(-1) !== '/') pathname += '/';
-	return pathname === href || (href !== '/' && pathname.startsWith(href));
+  let pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, "");
+  if (pathname.at(0) !== "/") pathname = "/" + pathname;
+  if (pathname.at(-1) !== "/") pathname += "/";
+  return pathname === href || (href !== "/" && pathname.startsWith(href));
 };
 ---
 
-<header>
-	<a href="/" class="site-logo">
-		<Image src={LogoImage} alt="Duisterethomas" height="64" loading="eager" />
-	</a>
-	<nav class="nav-items backdrop-blur-xl">
-		{
-			textLinks.map(({ label, href }) => (
-				<li>
-					<a aria-current={isCurrentPage(href) ? 'page' : null} class="link" href={href}>
-						{label}
-					</a>
-				</li>
-			))
-		}
-	</nav>
-	<div class="socials backdrop-blur-xl">
-		{
-			iconLinks.map(({ href, icon, label, color }) => (
-				<Social href={href} icon={icon} label={label} color={color} />
-			))
-		}
-	</div>
+<header
+  class="fixed z-9999 mb-14 grid w-full items-center gap-4 px-12 py-8 font-medium"
+>
+  <a
+    href="/"
+    class="flex items-center gap-2 justify-self-center md:justify-self-start"
+  >
+    <Image src={LogoImage} alt="Duisterethomas" height="64" loading="eager" />
+  </a>
+  <nav
+    class="nav-items m-0 flex w-fit list-none gap-3 justify-self-center rounded-full p-2 text-sm leading-[1.2] bg-blend-overlay backdrop-blur-xl text-shadow-none"
+  >
+    {
+      textLinks.map(({ label, href }) => (
+        <li>
+          <a
+            aria-current={isCurrentPage(href) ? "page" : null}
+            class="link inline-block rounded-full px-3.5 py-2.5 text-gray-300 hover:text-gray-100"
+            href={href}
+          >
+            {label}
+          </a>
+        </li>
+      ))
+    }
+  </nav>
+  <div
+    class="socials relative flex flex-row flex-nowrap justify-between justify-self-center rounded-full px-2 py-1 text-xl backdrop-blur-xl md:justify-self-end"
+  >
+    {
+      iconLinks.map(({ href, icon, label, color }) => (
+        <Social href={href} icon={icon} label={label} color={color} />
+      ))
+    }
+  </div>
 </header>
 
 <style>
-	header {
-		z-index: 9999;
-		position: fixed;
-		width: 100%;
-		font-family: var(--font-brand);
-		font-weight: 500;
-		margin-bottom: 3.5rem;
-		display: grid;
-		grid-template-columns: 1fr auto 1fr;
-		align-items: center;
-		padding: 2rem 3rem;
-		gap: 1rem;
-	}
+  header {
+    grid-template-columns: 1fr auto 1fr;
+  }
 
-	.site-logo {
-		display: flex;
-		gap: 0.5rem;
-		align-items: center;
-		justify-self: flex-start;
-	}
+  .nav-items {
+    background: url("/assets/backgrounds/noise.png") top center/220px repeat;
+    background-color: var(--gray-999_50);
+    box-shadow: 0px 0px 4px var(--color-gray-600);
+  }
 
-	.nav-items {
-		margin: 0;
-		display: flex;
-		flex-direction: row;
-		width: fit-content;
-		justify-self: center;
-		gap: 0.75rem;
-		font-size: var(--text-md);
-		line-height: 1.2;
-		list-style: none;
-		padding: 0.5rem 0.5625rem;
-		font-size: var(--text-sm);
-		border-radius: 999rem;
-		box-shadow: 0px 0px 4px var(--color-gray-600);
-		background: url('/assets/backgrounds/noise.png') top center/220px repeat;
-		background-blend-mode: overlay;
-		background-color: var(--gray-999_50);
-		text-shadow: none;
-	}
+  .link {
+    transition:
+      color var(--theme-transition),
+      background-color var(--theme-transition);
+  }
 
-	.link {
-		display: inline-block;
-		color: var(--gray-300);
-		text-decoration: none;
-		padding: 0.5rem 1rem;
-		border-radius: 999rem;
-		transition:
-			color var(--theme-transition),
-			background-color var(--theme-transition);
-	}
+  .link:hover,
+  .link:focus {
+    background-color: var(--accent-subtle-overlay);
+  }
 
-	.link:hover,
-	.link:focus {
-		color: var(--gray-100);
-		background-color: var(--accent-subtle-overlay);
-	}
+  .link[aria-current="page"] {
+    color: var(--accent-text-over);
+    background-color: var(--accent-regular);
+  }
 
-	.link[aria-current='page'] {
-		color: var(--accent-text-over);
-		background-color: var(--accent-regular);
-	}
+  .link[aria-current] {
+    color: var(--gray-0);
+  }
 
-	.link[aria-current] {
-		color: var(--gray-0);
-	}
+  .socials {
+    background-color: var(--gray-999_50);
+    box-shadow: 0px 0px 4px var(--color-gray-600);
+  }
 
-	.socials {
-		--icon-size: var(--text-xl);
-		--icon-padding: 0.375rem;
-
-		display: flex;
-		flex-wrap: nowrap;
-		font-size: var(--icon-size);
-		justify-content: space-between;
-		justify-self: flex-end;
-		position: relative;
-		flex-direction: row;
-		border-radius: 999rem;
-		padding: 0.4rem 0.6rem;
-		box-shadow: 0px 0px 4px var(--color-gray-600);
-		background-color: var(--gray-999_50);
-	}
-
-	@media (max-width: 45em) {
-		header {
-			grid-template-columns: auto;
-			grid-template-rows: auto auto auto;
-		}
-
-		.site-logo {
-			justify-self: center;
-		}
-
-		.socials {
-			justify-self: center;
-		}
-	}
+  @media (max-width: 48em) {
+    header {
+      grid-template-columns: auto;
+      grid-template-rows: auto auto auto;
+    }
+  }
 </style>
