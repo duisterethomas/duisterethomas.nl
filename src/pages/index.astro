@@ -12,13 +12,10 @@ import LinkButton from "../components/LinkButton.astro";
 <BaseLayout>
     <div class="pt-72 pb-60" id="section-1">
         <div class="wrapper">
-            <div class="grid w-3xl gap-14 px-10 text-start text-xl">
+            <div class="grid max-w-3xl gap-14 px-10 text-start text-xl">
                 <div class="flex flex-col gap-2">
                     <h1>Hej, dit is niet de IKEA</h1>
-                    <p>
-                        Dit is namelijk <a href="https://duisterethomas.nl"
-                            >duisterethomas.nl</a>
-                    </p>
+                    <p>Dit is namelijk <a href="https://duisterethomas.nl">duisterethomas.nl</a></p>
                 </div>
             </div>
         </div>
@@ -47,9 +44,7 @@ import LinkButton from "../components/LinkButton.astro";
 
     <div class="py-32" id="section-3">
         <div class="wrapper">
-            <div
-                class="grid grid-cols-2 items-center gap-14 px-10 text-start text-xl"
-            >
+            <div class="grid grid-cols-2 items-center gap-14 px-10 text-start text-xl">
                 <div class="flex flex-col gap-2">
                     <h1>Mijn muziek</h1>
                     <p>
@@ -142,8 +137,8 @@ import LinkButton from "../components/LinkButton.astro";
     </div>
 
     <div class="py-40" id="section-4">
-        <div class="wrapper">
-            <div class="items-center gap-14 px-64 text-center text-xl">
+        <div class="wrapper justify-center">
+            <div class="m-auto max-w-4xl items-center gap-14 px-10 text-center text-xl">
                 <div class="flex flex-col gap-2">
                     <h1>Pancake Mod</h1>
                     <p>
@@ -169,17 +164,18 @@ import LinkButton from "../components/LinkButton.astro";
     <div class="py-40" id="section-5">
         <div class="wrapper">
             <div class="items-center gap-14 px-10 text-center text-xl">
-                <div class="flex flex-col gap-2 px-64">
-                    <h1>Programmeren</h1>
-                    <p>
-                        Ja dat is ook een hobby van mij. Zo heb ik bijvoorbeeld
-                        deze website helemaal zelf geprogrammeerd.
-                    </p>
+                <div class="flex w-full justify-center">
+                    <div class="flex max-w-3xl flex-col gap-2">
+                        <h1>Programmeren</h1>
+                        <p>
+                            Ja dat is ook een hobby van mij. Zo heb ik
+                            bijvoorbeeld deze website helemaal zelf
+                            geprogrammeerd.
+                        </p>
+                    </div>
                 </div>
-                <div class="mt-12 grid grid-cols-3 gap-8">
-                    <div
-                        class="flex flex-col justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700"
-                    >
+                <div class="mt-12 grid grid-rows-3 gap-8 lg:grid-cols-3 lg:grid-rows-1">
+                    <div class="flex flex-col justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700">
                         <h4>duisterethomas.nl</h4>
                         <p>De source code van deze website.</p>
                         <div class="mt-2 self-center">
@@ -192,9 +188,7 @@ import LinkButton from "../components/LinkButton.astro";
                         </div>
                     </div>
 
-                    <div
-                        class="flex flex-col justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700"
-                    >
+                    <div class="flex flex-col justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700">
                         <h4>Rooster-EPD</h4>
                         <p>
                             Een klein e-Paper apparaatje waarop je je Zermelo
@@ -210,9 +204,7 @@ import LinkButton from "../components/LinkButton.astro";
                         </div>
                     </div>
 
-                    <div
-                        class="flex flex-col justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700"
-                    >
+                    <div class="flex flex-col justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700">
                         <h4>Nog meer...</h4>
                         <p>Zie al mijn repositories op GitHub.</p>
                         <div class="mt-2 self-center">
