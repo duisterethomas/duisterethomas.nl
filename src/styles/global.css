@@ -109,5 +109,5 @@
 /* Utilities */
 
 .wrapper {
-    @apply mx-auto w-full max-w-[83rem] px-6;
+    @apply mx-auto w-full max-w-[83rem] px-6 wrap-anywhere;
 }
