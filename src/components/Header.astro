@@ -59,7 +59,7 @@ const isCurrentPage = (href: string) => {
                 <li>
                     <a
                         aria-current={isCurrentPage(href) ? "page" : null}
-                        class="link inline-block rounded-full px-3.5 py-2.5 text-gray-300 hover:text-gray-100"
+                        class="link hover:bg-accent-overlay focus:bg-accent-overlay inline-block rounded-full px-3.5 py-2.5 text-gray-300 hover:text-gray-100 focus:text-gray-100"
                         href={href}
                     >
                         {label}
@@ -80,39 +80,25 @@ const isCurrentPage = (href: string) => {
 </header>
 
 <style>
+    @reference "../styles/global.css";
+
     header {
         grid-template-columns: 1fr auto 1fr;
     }
 
-    .nav-items {
+    .nav-items,
+    .socials {
         background: url("/assets/backgrounds/noise.png") top center/220px repeat;
-        background-color: var(--gray-999_50);
-        box-shadow: 0px 0px 4px var(--color-gray-600);
-    }
-
-    .link {
-        transition:
-            color var(--theme-transition),
-            background-color var(--theme-transition);
-    }
-
-    .link:hover,
-    .link:focus {
-        background-color: var(--accent-subtle-overlay);
+        background-color: #00000080;
+        box-shadow: 0px 0px 4px #5d5d5d;
     }
 
     .link[aria-current="page"] {
-        color: var(--accent-text-over);
-        background-color: var(--accent-regular);
+        @apply bg-accent-regular text-white;
     }
 
     .link[aria-current] {
-        color: var(--gray-0);
-    }
-
-    .socials {
-        background-color: var(--gray-999_50);
-        box-shadow: 0px 0px 4px var(--color-gray-600);
+        @apply text-white;
     }
 
     @media (max-width: 48em) {

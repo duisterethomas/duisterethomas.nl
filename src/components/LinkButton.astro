@@ -9,11 +9,16 @@ interface Props {
     icon?: keyof typeof iconPaths;
 }
 
-const { href, newtab, color = "var(--accent-regular)", icon } = Astro.props;
+const {
+    href,
+    newtab,
+    color = "var(--color-accent-regular)",
+    icon,
+} = Astro.props;
 ---
 
 <a
-    class="relative flex w-fit content-center overflow-hidden rounded-full border-5 border-transparent px-12 py-2 text-center text-xl whitespace-nowrap text-white shadow-md shadow-gray-800 text-shadow-none hover:border-white hover:text-white"
+    class="relative flex w-fit content-center overflow-hidden rounded-full border-5 border-transparent px-12 py-2 text-center text-xl whitespace-nowrap text-white shadow-md shadow-gray-800 text-shadow-none hover:border-white focus:border-white"
     href={href}
     target={newtab ? "_blank" : ""}
 >
@@ -30,6 +35,5 @@ const { href, newtab, color = "var(--accent-regular)", icon } = Astro.props;
 <style define:vars={{ color }}>
     a {
         background: var(--color);
-        transition: border-color var(--theme-transition);
     }
 </style>

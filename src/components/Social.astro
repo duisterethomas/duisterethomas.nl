@@ -5,7 +5,7 @@ const { href, icon, label, color } = Astro.props;
 ---
 
 <a
-    class="tooltip relative flex p-1.5 text-white hover:text-white"
+    class="tooltip relative flex p-1.5 text-white hover:text-white focus:text-white"
     href={href}
     target="_blank"
 >
@@ -14,52 +14,28 @@ const { href, icon, label, color } = Astro.props;
 </a>
 
 <style define:vars={{ color }}>
-    a {
-        transition: color var(--theme-transition);
-    }
+    @reference "../styles/global.css";
 
     .icon {
         color: var(--color);
-        transition: color var(--theme-transition);
     }
 
     a:hover .icon,
     a:focus .icon {
-        color: var(--accent-text-over);
+        @apply text-white;
     }
 
     .tooltip .tooltiptext {
-        pointer-events: none;
-        opacity: 0;
-        transition: opacity var(--theme-transition);
-        background-color: var(--gray-999);
-        text-shadow: none;
-        text-align: center;
-        padding: 5px;
-        border-radius: 6px;
-        font-size: small;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-
-        position: absolute;
-        z-index: 1;
+        @apply pointer-events-none absolute top-full left-[50%] z-1 transform-[translateX(-50%)] rounded-md bg-black p-[5px] text-center text-sm opacity-0 text-shadow-none;
     }
 
     .tooltip .tooltiptext::after {
-        content: "";
-        position: absolute;
-        bottom: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: transparent transparent var(--gray-999) transparent;
+        @apply absolute bottom-full left-[50%] ml-[-5px] border-[5px] border-solid content-[""];
+        border-color: transparent transparent #000 transparent;
     }
 
     .tooltip:hover .tooltiptext,
     .tooltip:focus .tooltiptext {
-        transition-delay: 0.5s;
-        opacity: 1;
+        @apply opacity-100 delay-500;
     }
 </style>
