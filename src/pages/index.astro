@@ -220,6 +220,36 @@ import LinkButton from "../components/LinkButton.astro";
             </div>
         </div>
     </div>
+
+    <div class="py-60" id="section-games">
+        <div class="wrapper">
+            <div class="grid grid-rows-2 xl:grid-rows-1 xl:grid-cols-2 gap-14 px-10 text-start text-xl">
+                <div class="flex flex-col gap-2 text-center xl:text-start">
+                    <h1 id="fnatc-title">Five Nights at the Cafe</h1>
+                    <p>Dit is een Five Nights at Freddy's fangame die ik heb gemaakt.</p>
+                    <div class="mt-2 flex gap-4 self-center xl:self-auto">
+                        <div><LinkButton
+                            href={socialLinks["gamejolt"]["href"]}
+                            newtab
+                            color="#2f7f6f"
+                            icon={socialLinks["gamejolt"]["icon"]}
+                            >Game Jolt</LinkButton></div>
+                        
+                        <div><LinkButton
+                            href={socialLinks["itchio"]["href"]}
+                            newtab
+                            color={socialLinks["itchio"]["color"]}
+                            icon={socialLinks["itchio"]["icon"]}
+                            >Itch.io</LinkButton></div>
+                    </div>
+                </div>
+
+                <div class="place-self-center">
+                    <iframe src="https://widgets.gamejolt.com/package/v1?key=5x7FBTjB" width="500" height="245"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 </BaseLayout>
 
 <style>
@@ -248,5 +278,17 @@ import LinkButton from "../components/LinkButton.astro";
         background: url("/assets/backgrounds/GitHub-Rooster-EPD.webp") top
             center;
         background-size: cover;
+    }
+
+    #section-games {
+        background: url("/assets/backgrounds/fnatc.png") center center;
+        background-size: cover;
+    }
+
+    #fnatc-title {
+        font-family: "Big Shoulders Stencil", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
     }
 </style>
