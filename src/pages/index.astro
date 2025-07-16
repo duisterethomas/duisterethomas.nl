@@ -15,7 +15,10 @@ import LinkButton from "../components/LinkButton.astro";
             <div class="grid max-w-2xl gap-14 px-10 text-start text-xl">
                 <div class="flex flex-col gap-2">
                     <h1>Hej, this is not IKEA</h1>
-                    <p>Because this is <a href="https://duisterethomas.nl">duisterethomas.nl</a></p>
+                    <p>
+                        Because this is <a href="https://duisterethomas.nl"
+                            >duisterethomas.nl</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -48,8 +51,8 @@ import LinkButton from "../components/LinkButton.astro";
                 <div class="flex flex-col gap-2">
                     <h1>My music</h1>
                     <p>
-                        I often use my own music as background tracks
-                        in my <a href={socialLinks["youtube"]["href"]}
+                        I often use my own music as background tracks in my <a
+                            href={socialLinks["youtube"]["href"]}
                             >YouTube videos</a>.
                     </p>
                     <LinkButton
@@ -142,11 +145,11 @@ import LinkButton from "../components/LinkButton.astro";
                 <div class="flex flex-col gap-2">
                     <h1>Pancake Mod</h1>
                     <p>
-                        I've made a Minecraft mod gemaakt, a very essential
-                        mod: the <a href="https://modrinth.com/mod/pancakemod"
-                            >Pancake Mod</a
-                        >. It is a mod that adds Dutch Pancakes
-                        to Minecraft, who doesn't want that?
+                        I've made a Minecraft mod gemaakt, a very essential mod:
+                        the <a href="https://modrinth.com/mod/pancakemod"
+                            >Pancake Mod</a>
+                        . It is a mod that adds Dutch Pancakes to Minecraft,
+                        who doesn't want that?
                     </p>
                     <div class="mt-2 self-center">
                         <LinkButton
@@ -168,8 +171,8 @@ import LinkButton from "../components/LinkButton.astro";
                     <div class="flex max-w-2xl flex-col gap-2">
                         <h1>Coding</h1>
                         <p>
-                            Yes, this is also a hobby of mine. I've
-                            coded this website myself for example.
+                            Yes, this is also a hobby of mine. I've coded this
+                            website myself for example.
                         </p>
                     </div>
                 </div>
@@ -190,7 +193,8 @@ import LinkButton from "../components/LinkButton.astro";
                     <div class="flex flex-col justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700">
                         <h4>Rooster-EPD</h4>
                         <p>
-                            A small e-Paper device that shows your Zermelo schedule. 
+                            A small e-Paper device that shows your Zermelo
+                            schedule.
                         </p>
                         <div class="mt-2 self-center">
                             <LinkButton
@@ -221,29 +225,39 @@ import LinkButton from "../components/LinkButton.astro";
 
     <div class="py-60" id="section-games">
         <div class="wrapper">
-            <div class="grid grid-rows-2 xl:grid-rows-1 xl:grid-cols-2 gap-14 px-10 text-start text-xl">
+            <div class="grid grid-rows-2 gap-14 px-10 text-start text-xl xl:grid-cols-2 xl:grid-rows-1">
                 <div class="flex flex-col gap-2 text-center xl:text-start">
                     <h1 id="fnatc-title">Five Nights at the Cafe</h1>
-                    <p>This is a Five Nights at Freddy's fangame that I've made.</p>
+                    <p>
+                        This is a Five Nights at Freddy's fangame that I've
+                        made.
+                    </p>
                     <div class="mt-2 flex gap-4 self-center xl:self-auto">
-                        <div><LinkButton
-                            href={socialLinks["gamejolt"]["href"]}
-                            newtab
-                            color="#2f7f6f"
-                            icon={socialLinks["gamejolt"]["icon"]}
-                            >Game Jolt</LinkButton></div>
-                        
-                        <div><LinkButton
-                            href={socialLinks["itchio"]["href"]}
-                            newtab
-                            color={socialLinks["itchio"]["color"]}
-                            icon={socialLinks["itchio"]["icon"]}
-                            >Itch.io</LinkButton></div>
+                        <div>
+                            <LinkButton
+                                href={socialLinks["gamejolt"]["href"]}
+                                newtab
+                                color="#2f7f6f"
+                                icon={socialLinks["gamejolt"]["icon"]}
+                                >Game Jolt</LinkButton>
+                        </div>
+
+                        <div>
+                            <LinkButton
+                                href={socialLinks["itchio"]["href"]}
+                                newtab
+                                color={socialLinks["itchio"]["color"]}
+                                icon={socialLinks["itchio"]["icon"]}
+                                >Itch.io</LinkButton>
+                        </div>
                     </div>
                 </div>
 
                 <div class="place-self-center">
-                    <iframe src="https://widgets.gamejolt.com/package/v1?key=5x7FBTjB" width="500" height="245"></iframe>
+                    <iframe
+                        src="https://widgets.gamejolt.com/package/v1?key=5x7FBTjB"
+                        width="500"
+                        height="245"></iframe>
                 </div>
             </div>
         </div>
@@ -252,7 +266,13 @@ import LinkButton from "../components/LinkButton.astro";
     <div class="py-20">
         <div class="wrapper">
             <div class="gap-14 px-10 text-center text-xl">
-                <p>P.S. my merch is not for sale.<br>Would you still like some? Then send an e-mail to <a href="mailto:iwantmerch@duisterethomas.nl">iwantmerch@duisterethomas.nl</a> and you still won't get it.</p>
+                <p>
+                    P.S. my merch is not for sale.<br />Would you still like
+                    some? Then send an e-mail to <a
+                        href="mailto:iwantmerch@duisterethomas.nl"
+                        >iwantmerch@duisterethomas.nl</a
+                    > and you still won't get it.
+                </p>
             </div>
         </div>
     </div>
