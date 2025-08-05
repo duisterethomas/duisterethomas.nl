@@ -10,9 +10,9 @@ import LinkButton from "../components/LinkButton.astro";
 ---
 
 <BaseLayout>
-    <div class="pt-72 pb-60" id="section-top">
+    <div class="pt-72 pb-24 lg:pb-60" id="section-top">
         <div class="wrapper">
-            <div class="grid max-w-2xl gap-14 px-10 text-start text-xl">
+            <div class="grid max-w-2xl gap-14 text-start text-xl md:px-10">
                 <div class="flex flex-col gap-2">
                     <h1>Hej, this is not IKEA</h1>
                     <p>
@@ -24,16 +24,16 @@ import LinkButton from "../components/LinkButton.astro";
         </div>
     </div>
 
-    <div class="py-40" id="section-youtube">
+    <div class="py-24 lg:py-40" id="section-youtube">
         <div class="wrapper">
             <YouTube
                 class="min-w-full rounded-2xl shadow-md shadow-gray-800"
                 id="https://www.youtube.com/watch?v=wH7tWqcRruw"
                 posterQuality="max"
             />
-            <div class="mt-4 grid grid-cols-2 items-center">
-                <h4>My most recent YouTube video</h4>
-                <div class="justify-self-end">
+            <div class="mt-4 flex flex-col gap-4 text-center md:flex-row md:text-start">
+                <h4 class="my-auto">My most recent YouTube video</h4>
+                <div class="mx-auto md:mr-0">
                     <LinkButton
                         href={socialLinks["youtube"]["href"]}
                         newtab
@@ -45,9 +45,9 @@ import LinkButton from "../components/LinkButton.astro";
         </div>
     </div>
 
-    <div class="py-32" id="section-music">
+    <div class="py-24 lg:py-32" id="section-music">
         <div class="wrapper">
-            <div class="grid grid-cols-2 items-center gap-14 px-10 text-start text-xl">
+            <div class="grid grid-rows-2 items-center text-start text-xl md:px-10 lg:grid-cols-2 lg:grid-rows-1 lg:gap-14">
                 <div class="flex flex-col gap-2">
                     <h1>My music</h1>
                     <p>
@@ -139,16 +139,16 @@ import LinkButton from "../components/LinkButton.astro";
         </div>
     </div>
 
-    <div class="py-40" id="section-mod">
-        <div class="wrapper justify-center">
-            <div class="m-auto max-w-4xl items-center gap-14 px-10 text-center text-xl">
+    <div class="py-24 md:py-40" id="section-mod">
+        <div class="wrapper">
+            <div class="m-auto max-w-4xl items-center gap-14 text-center text-xl md:px-10">
                 <div class="flex flex-col gap-2">
                     <h1>Pancake Mod</h1>
                     <p>
                         I've made a Minecraft mod, a very essential mod:
                         the <a href="https://modrinth.com/mod/pancakemod"
-                            >Pancake Mod</a>
-                        . It is a mod that adds Dutch Pancakes to Minecraft,
+                            >Pancake Mod</a>. 
+                        It is a mod that adds Dutch Pancakes to Minecraft,
                         who doesn't want that?
                     </p>
                     <div class="mt-2 self-center">
@@ -164,9 +164,9 @@ import LinkButton from "../components/LinkButton.astro";
         </div>
     </div>
 
-    <div class="py-40" id="section-github">
+    <div class="py-24 lg:py-40" id="section-github">
         <div class="wrapper">
-            <div class="items-center gap-14 px-10 text-center text-xl">
+            <div class="items-center gap-14 text-center text-xl md:px-10">
                 <div class="flex w-full justify-center">
                     <div class="flex max-w-2xl flex-col gap-2">
                         <h1>Coding</h1>
@@ -223,17 +223,17 @@ import LinkButton from "../components/LinkButton.astro";
         </div>
     </div>
 
-    <div class="py-60" id="section-games">
+    <div class="py-24 xl:py-60" id="section-games">
         <div class="wrapper">
-            <div class="grid grid-rows-2 gap-14 px-10 text-start text-xl xl:grid-cols-2 xl:grid-rows-1">
+            <div class="grid grid-rows-2 text-start text-xl md:gap-14 md:px-10 xl:grid-cols-2 xl:grid-rows-1">
                 <div class="flex flex-col gap-2 text-center xl:text-start">
                     <h1 id="fnatc-title">Five Nights at the Cafe</h1>
                     <p>
                         This is a Five Nights at Freddy's fangame that I've
                         made.
                     </p>
-                    <div class="mt-2 flex gap-4 self-center xl:self-auto">
-                        <div>
+                    <div class="mt-2 flex flex-col gap-4 self-center sm:flex-row xl:self-auto">
+                        <div class="mx-auto sm:mx-0">
                             <LinkButton
                                 href={socialLinks["gamejolt"]["href"]}
                                 newtab
@@ -241,8 +241,7 @@ import LinkButton from "../components/LinkButton.astro";
                                 icon={socialLinks["gamejolt"]["icon"]}
                                 >Game Jolt</LinkButton>
                         </div>
-
-                        <div>
+                        <div class="mx-auto sm:mx-0">
                             <LinkButton
                                 href={socialLinks["itchio"]["href"]}
                                 newtab
@@ -253,10 +252,17 @@ import LinkButton from "../components/LinkButton.astro";
                     </div>
                 </div>
 
-                <div class="place-self-center">
+                <div class="place-self-center sm:hidden">
                     <iframe
                         src="https://widgets.gamejolt.com/package/v1?key=5x7FBTjB"
-                        width="500"
+                        width="280"
+                        height="245"></iframe>
+                </div>
+
+                <div class="hidden place-self-center sm:block">
+                    <iframe
+                        src="https://widgets.gamejolt.com/package/v1?key=5x7FBTjB"
+                        width="430"
                         height="245"></iframe>
                 </div>
             </div>
@@ -265,7 +271,7 @@ import LinkButton from "../components/LinkButton.astro";
 
     <div class="py-20">
         <div class="wrapper">
-            <div class="gap-14 px-10 text-center text-xl">
+            <div class="gap-14 text-center text-xl md:px-10">
                 <p>
                     P.S. my merch is not for sale.<br />Would you still like
                     some? Then send an e-mail to <a
