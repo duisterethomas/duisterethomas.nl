@@ -8,6 +8,7 @@ import Social from "./Social.astro";
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
     { label: "Home", href: "/" },
+    { label: "Gear", href: "/gear" },
 ];
 
 /** Icon links to social media */
@@ -51,7 +52,7 @@ const isCurrentPage = (href: string) => {
         />
     </a>
     <nav
-        class="nav-items m-0 flex w-fit list-none gap-3 justify-self-center rounded-full p-2 text-sm leading-[1.2] bg-blend-overlay backdrop-blur-xl text-shadow-none"
+        class="nav-items m-0 flex w-fit list-none gap-1.5 justify-self-center rounded-full p-2 text-sm leading-[1.2] bg-blend-overlay backdrop-blur-xl text-shadow-none"
     >
         {
             textLinks.map(({ label, href }) => (
