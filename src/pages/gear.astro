@@ -3,13 +3,13 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 // Import components
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 //Import images
-import canonEOS2000D from '../images/gear/canonEOS2000D.jpg';
-import canonEOS250D from '../images/gear/canonEOS250D.jpg';
-import RODEVideoMicGOII from '../images/gear/RODEVideoMicGOII.jpg';
-import RODEWirelessME_LavII from '../images/gear/RODEWirelessME_LavII.jpg';
+import canonEOS2000D from "../images/gear/canonEOS2000D.jpg";
+import canonEOS250D from "../images/gear/canonEOS250D.jpg";
+import RODEVideoMicGOII from "../images/gear/RODEVideoMicGOII.jpg";
+import RODEWirelessME_LavII from "../images/gear/RODEWirelessME_LavII.jpg";
 ---
 
 <BaseLayout title="Gear">
@@ -19,7 +19,8 @@ import RODEWirelessME_LavII from '../images/gear/RODEWirelessME_LavII.jpg';
                 <div class="flex flex-col gap-2">
                     <h1>The gear I use</h1>
                     <p>
-                        The specific gear used per YouTube video is in the description of that video.
+                        The specific gear used per YouTube video is in the
+                        description of that video.
                     </p>
                 </div>
             </div>
@@ -33,20 +34,55 @@ import RODEWirelessME_LavII from '../images/gear/RODEWirelessME_LavII.jpg';
             </div>
 
             <div class="mt-12 grid grid-rows-2 gap-8 lg:grid-cols-2 lg:grid-rows-1">
-                <div class="flex flex-col justify-center rounded-3xl box backdrop-blur-xl p-9 gap-1 text-center outline-1 outline-neutral-700">
-                    <h4><a href="https://www.canon.nl/cameras/eos-250d/" target="_blank">Canon EOS 250D</a></h4>
+                <div class="box flex flex-col justify-center gap-1 rounded-3xl p-9 text-center outline-1 outline-neutral-700 backdrop-blur-xl">
+                    <h4>
+                        <a
+                            href="https://www.canon.nl/cameras/eos-250d/"
+                            target="_blank">Canon EOS 250D</a>
+                    </h4>
                     <p class="text-start">
-                        This is my main shooter, I have used this camera in all of my recent video's. I mostly record in 1080p at 60 fps. The main lens I use is the <a href="https://www.canon.nl/lenses/ef-s-18-135mm-f-3-5-5-6-is-stm-lens/" target="_blank">Canon EF-S 18-135mm f/3.5-5.6 IS STM</a> lens, giving me great zoom flexibility. For wide angle shots I use the <a href="https://www.canon.nl/lenses/ef-s-10-18mm-f-4-5-5-6-is-stm-lens/" target="_blank">Canon EF-S 10-18mm f/4.5-5.6 IS STM</a> lens.
+                        This is my main shooter, I have used this camera in all
+                        of my recent video's. I mostly record in 1080p at 60
+                        fps. The main lens I use is the <a
+                            href="https://www.canon.nl/lenses/ef-s-18-135mm-f-3-5-5-6-is-stm-lens/"
+                            target="_blank"
+                            >Canon EF-S 18-135mm f/3.5-5.6 IS STM</a
+                        > lens, giving me great zoom flexibility. For wide angle
+                        shots I use the <a
+                            href="https://www.canon.nl/lenses/ef-s-10-18mm-f-4-5-5-6-is-stm-lens/"
+                            target="_blank"
+                            >Canon EF-S 10-18mm f/4.5-5.6 IS STM</a
+                        > lens.
                     </p>
-                    <Image class="rounded-2xl mt-2" src={canonEOS250D} alt="Canon EOS 250D" />
+                    <Image
+                        class="mt-2 rounded-2xl"
+                        src={canonEOS250D}
+                        alt="Canon EOS 250D"
+                    />
                 </div>
 
-                <div class="flex flex-col justify-center rounded-3xl box backdrop-blur-xl p-9 gap-1 text-center outline-1 outline-neutral-700">
-                    <h4><a href="https://www.canon.nl/cameras/eos-2000d/" target="_blank">Canon EOS 2000D</a></h4>
+                <div class="box flex flex-col justify-center gap-1 rounded-3xl p-9 text-center outline-1 outline-neutral-700 backdrop-blur-xl">
+                    <h4>
+                        <a
+                            href="https://www.canon.nl/cameras/eos-2000d/"
+                            target="_blank">Canon EOS 2000D</a>
+                    </h4>
                     <p class="text-start">
-                        This is my older secondary camera, I still use it occasionally when I need two camera angles at once. Depending on the specific needs of a video I will either shoot at 720p 60 fps or 1080p 30 fps. The lens on this one is the one included in the kit: the <a href="https://www.canon.nl/lenses/ef-s-18-55mm-f-3-5-5-6-is-ii-lens/" target="_blank">Canon EF-S 18-55mm f/3.5-5.6 IS II</a>.
+                        This is my older secondary camera, I still use it
+                        occasionally when I need two camera angles at once.
+                        Depending on the specific needs of a video I will either
+                        shoot at 720p 60 fps or 1080p 30 fps. The lens on this
+                        one is the one included in the kit: the <a
+                            href="https://www.canon.nl/lenses/ef-s-18-55mm-f-3-5-5-6-is-ii-lens/"
+                            target="_blank"
+                            >Canon EF-S 18-55mm f/3.5-5.6 IS II</a
+                        >.
                     </p>
-                    <Image class="rounded-2xl mt-2" src={canonEOS2000D} alt="Canon EOS 2000D" />
+                    <Image
+                        class="mt-2 rounded-2xl"
+                        src={canonEOS2000D}
+                        alt="Canon EOS 2000D"
+                    />
                 </div>
             </div>
         </div>
@@ -59,20 +95,47 @@ import RODEWirelessME_LavII from '../images/gear/RODEWirelessME_LavII.jpg';
             </div>
 
             <div class="mt-12 grid grid-rows-2 gap-8 lg:grid-cols-2 lg:grid-rows-1">
-                <div class="flex flex-col justify-center rounded-3xl box backdrop-blur-xl p-9 gap-1 text-center outline-1 outline-neutral-700">
-                    <h4><a href="https://rode.com/en-int/products/videomic-go-ii" target="_blank">RØDE VideoMic GO II</a></h4>
+                <div class="box flex flex-col justify-center gap-1 rounded-3xl p-9 text-center outline-1 outline-neutral-700 backdrop-blur-xl">
+                    <h4>
+                        <a
+                            href="https://rode.com/en-int/products/videomic-go-ii"
+                            target="_blank">RØDE VideoMic GO II</a>
+                    </h4>
                     <p class="text-start">
-                        I use this shotgun mic in most static shots, for example in <a href="https://www.youtube.com/watch?v=i30fddkbUZE" target="_blank">"The problem with smart lights"</a>. It's pretty affordable and in my opinion sounds great!
+                        I use this shotgun mic in most static shots, for example
+                        in <a
+                            href="https://www.youtube.com/watch?v=i30fddkbUZE"
+                            target="_blank">"The problem with smart lights"</a
+                        >. It's pretty affordable and in my opinion sounds
+                        great!
                     </p>
-                    <Image class="rounded-2xl mt-2" src={RODEVideoMicGOII} alt="RØDE VideoMic GO II" />
+                    <Image
+                        class="mt-2 rounded-2xl"
+                        src={RODEVideoMicGOII}
+                        alt="RØDE VideoMic GO II"
+                    />
                 </div>
 
-                <div class="flex flex-col justify-center rounded-3xl box backdrop-blur-xl p-9 gap-1 text-center outline-1 outline-neutral-700">
-                    <h4><a href="https://rode.com/en-int/products/wireless-me" target="_blank">RØDE Wireless ME</a> + <a href="https://rode.com/en-int/products/lavalier-ii" target="_blank">RØDE Lavalier II</a></h4>
+                <div class="box flex flex-col justify-center gap-1 rounded-3xl p-9 text-center outline-1 outline-neutral-700 backdrop-blur-xl">
+                    <h4>
+                        <a
+                            href="https://rode.com/en-int/products/wireless-me"
+                            target="_blank">RØDE Wireless ME</a
+                        > + <a
+                            href="https://rode.com/en-int/products/lavalier-ii"
+                            target="_blank">RØDE Lavalier II</a>
+                    </h4>
                     <p class="text-start">
-                        I use this combination whenever I'm not using the shotgun mic. It doesn't sound as good as the shotgun, but is a good alternative for example when I'm moving a lot like in a VR game.
+                        I use this combination whenever I'm not using the
+                        shotgun mic. It doesn't sound as good as the shotgun,
+                        but is a good alternative for example when I'm moving a
+                        lot like in a VR game.
                     </p>
-                    <Image class="rounded-2xl mt-2" src={RODEWirelessME_LavII} alt="RØDE Wireless ME + RØDE Lavalier II" />
+                    <Image
+                        class="mt-2 rounded-2xl"
+                        src={RODEWirelessME_LavII}
+                        alt="RØDE Wireless ME + RØDE Lavalier II"
+                    />
                 </div>
             </div>
         </div>
