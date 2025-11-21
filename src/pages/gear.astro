@@ -1,0 +1,26 @@
+---
+// Import the layout
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Gear">
+    <div class="pt-72 pb-24 lg:pb-60" id="section-top">
+        <div class="wrapper">
+            <div class="grid max-w-2xl gap-14 text-start text-xl md:px-10">
+                <div class="flex flex-col gap-2">
+                    <h1>The gear I use</h1>
+                    <p>
+                        The specific gear used per YouTube video is in the description of that video.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</BaseLayout>
+
+<style>
+    #section-top {
+        background: url("/assets/backgrounds/background-1.jpg") center center;
+        background-size: cover;
+    }
+</style>
