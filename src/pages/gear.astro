@@ -8,6 +8,8 @@ import { Image } from 'astro:assets';
 //Import images
 import canonEOS2000D from '../images/gear/canonEOS2000D.jpg';
 import canonEOS250D from '../images/gear/canonEOS250D.jpg';
+import RODEVideoMicGOII from '../images/gear/RODEVideoMicGOII.jpg';
+import RODEWirelessME_LavII from '../images/gear/RODEWirelessME_LavII.jpg';
 ---
 
 <BaseLayout title="Gear">
@@ -49,6 +51,32 @@ import canonEOS250D from '../images/gear/canonEOS250D.jpg';
             </div>
         </div>
     </div>
+
+    <div class="py-24 lg:py-40" id="section-mics">
+        <div class="wrapper">
+            <div class="text-center md:px-10">
+                <h1>My microphones</h1>
+            </div>
+
+            <div class="mt-12 grid grid-rows-2 gap-8 lg:grid-cols-2 lg:grid-rows-1">
+                <div class="flex flex-col justify-center rounded-3xl box backdrop-blur-xl p-9 gap-1 text-center outline-1 outline-neutral-700">
+                    <h4><a href="https://rode.com/en-int/products/videomic-go-ii" target="_blank">RØDE VideoMic GO II</a></h4>
+                    <p class="text-start">
+                        I use this shotgun mic in most static shots, for example in <a href="https://www.youtube.com/watch?v=i30fddkbUZE" target="_blank">"The problem with smart lights"</a>. It's pretty affordable and in my opinion sounds great!
+                    </p>
+                    <Image class="rounded-2xl mt-2" src={RODEVideoMicGOII} alt="RØDE VideoMic GO II" />
+                </div>
+
+                <div class="flex flex-col justify-center rounded-3xl box backdrop-blur-xl p-9 gap-1 text-center outline-1 outline-neutral-700">
+                    <h4><a href="https://rode.com/en-int/products/wireless-me" target="_blank">RØDE Wireless ME</a> + <a href="https://rode.com/en-int/products/lavalier-ii" target="_blank">RØDE Lavalier II</a></h4>
+                    <p class="text-start">
+                        I use this combination whenever I'm not using the shotgun mic. It doesn't sound as good as the shotgun, but is a good alternative for example when I'm moving a lot like in a VR game.
+                    </p>
+                    <Image class="rounded-2xl mt-2" src={RODEWirelessME_LavII} alt="RØDE Wireless ME + RØDE Lavalier II" />
+                </div>
+            </div>
+        </div>
+    </div>
 </BaseLayout>
 
 <style>
@@ -59,6 +87,11 @@ import canonEOS250D from '../images/gear/canonEOS250D.jpg';
 
     #section-cameras {
         background: url("/assets/backgrounds/background-lens.jpg") center center;
+        background-size: cover;
+    }
+
+    #section-mics {
+        background: url("/assets/backgrounds/background-sound.jpg") center center;
         background-size: cover;
     }
 
