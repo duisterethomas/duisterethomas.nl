@@ -8,7 +8,7 @@ interface Props {
     description?: string | undefined;
 }
 
-const { title = "Duisterethomas", description = "" } = Astro.props;
+const { title = "", description = "" } = Astro.props;
 ---
 
 <html lang="en">
@@ -21,7 +21,7 @@ const { title = "Duisterethomas", description = "" } = Astro.props;
         />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <title>{title}</title>
+        {title ? <title>Duisterethomas - {title}</title> : <title>Duisterethomas</title>}
         <link rel="icon" type="image/svg" href="/favicon.svg" />
         <link rel="sitemap" href="/sitemap-index.xml" />
 
