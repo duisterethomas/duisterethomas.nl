@@ -14,14 +14,16 @@ const { title = "", description = "" } = Astro.props;
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+
+        <title>Duisterethomas{title ? ` - ${title}` : ""}</title>
         <meta
             name="description"
             property="og:description"
             content={description}
         />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        {title ? <title>Duisterethomas - {title}</title> : <title>Duisterethomas</title>}
+
         <link rel="icon" type="image/svg" href="/favicon.svg" />
         <link rel="sitemap" href="/sitemap-index.xml" />
 
