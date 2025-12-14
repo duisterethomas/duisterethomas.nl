@@ -1,15 +1,13 @@
 ---
 import type { HTMLAttributes } from "astro/types";
-import { iconPaths } from "./IconPaths";
 
 interface Props {
-    icon: keyof typeof iconPaths;
+    icon: string;
     color?: string;
     size?: string;
 }
 
 const { color = "currentcolor", icon, size } = Astro.props;
-const iconPath = iconPaths[icon];
 
 const attrs: HTMLAttributes<"svg"> = {};
 if (size) attrs.style = { "--size": size };
@@ -26,7 +24,7 @@ if (size) attrs.style = { "--size": size };
     fill={color}
     {...attrs}
 >
-    <g set:html={iconPath} />
+    <g set:html={icon} />
 </svg>
 
 <style>

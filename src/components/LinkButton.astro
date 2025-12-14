@@ -1,12 +1,11 @@
 ---
-import type { iconPaths } from "./IconPaths";
 import Icon from "./Icon.astro";
 
 interface Props {
     href: string;
     newtab?: boolean;
     color?: string;
-    icon?: keyof typeof iconPaths;
+    icon?: string;
 }
 
 const {
