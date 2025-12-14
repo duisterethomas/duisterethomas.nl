@@ -12,8 +12,11 @@ import RODEVideoMicGOII from "../images/gear/RODEVideoMicGOII.jpg";
 import RODEWirelessME_LavII from "../images/gear/RODEWirelessME_LavII.jpg";
 ---
 
-<BaseLayout title="Gear" description="Want to know what gear I use? Well... you can find it here!">
-    <div class="pt-72 pb-24 lg:pb-60" id="section-top">
+<BaseLayout
+    title="Gear"
+    description="Want to know what gear I use? Well... you can find it here!"
+>
+    <div class="bg-[url(/assets/backgrounds/background-1.jpg)] bg-cover bg-center pt-72 pb-24 lg:pb-60">
         <div class="wrapper">
             <div class="grid max-w-2xl gap-14 text-start text-xl md:px-10">
                 <div class="flex flex-col gap-2">
@@ -27,7 +30,10 @@ import RODEWirelessME_LavII from "../images/gear/RODEWirelessME_LavII.jpg";
         </div>
     </div>
 
-    <div class="py-24 lg:py-40" id="section-cameras">
+    <div
+        class="bg-[url(/assets/backgrounds/background-lens.jpg)] bg-cover bg-center py-24 lg:py-40"
+        id="cameras"
+    >
         <div class="wrapper">
             <div class="text-center md:px-10">
                 <h1>My camera's</h1>
@@ -88,7 +94,10 @@ import RODEWirelessME_LavII from "../images/gear/RODEWirelessME_LavII.jpg";
         </div>
     </div>
 
-    <div class="py-24 lg:py-40" id="section-mics">
+    <div
+        class="bg-[url(/assets/backgrounds/background-sound.jpg)] bg-cover bg-center py-24 lg:py-40"
+        id="microphones"
+    >
         <div class="wrapper">
             <div class="text-center md:px-10">
                 <h1>My microphones</h1>
@@ -143,21 +152,6 @@ import RODEWirelessME_LavII from "../images/gear/RODEWirelessME_LavII.jpg";
 </BaseLayout>
 
 <style>
-    #section-top {
-        background: url("/assets/backgrounds/background-1.jpg") center center;
-        background-size: cover;
-    }
-
-    #section-cameras {
-        background: url("/assets/backgrounds/background-lens.jpg") center center;
-        background-size: cover;
-    }
-
-    #section-mics {
-        background: url("/assets/backgrounds/background-sound.jpg") center center;
-        background-size: cover;
-    }
-
     .box {
         background: url("/assets/backgrounds/noise.png") top center/220px repeat;
         background-color: #00000090;
