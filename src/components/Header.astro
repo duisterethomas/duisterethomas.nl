@@ -1,7 +1,6 @@
 ---
 import { socialLinks } from "./SocialLinks";
-import { Image } from "astro:assets";
-import LogoImage from "../images/Duisterethomas-Logo.png";
+import Logo from "../images/Duisterethomas-Logo.svg";
 import Social from "./Social.astro";
 
 /** Main menu items */
@@ -41,11 +40,9 @@ const isCurrentPage = (href: string) => {
         href="/"
         class="flex items-center gap-2 justify-self-center md:justify-self-start"
     >
-        <Image
-            src={LogoImage}
-            alt="Duisterethomas"
-            height="64"
-            loading="eager"
+        <Logo
+            width="100"
+            height="100"
         />
     </a>
     <nav class="nav-items m-0 flex w-fit list-none gap-1.5 justify-self-center rounded-full p-2 text-sm leading-[1.2] bg-blend-overlay backdrop-blur-xl text-shadow-none">
