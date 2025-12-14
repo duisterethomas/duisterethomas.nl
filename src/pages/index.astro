@@ -10,7 +10,7 @@ import LinkButton from "../components/LinkButton.astro";
 ---
 
 <BaseLayout description="This is the official website of Duisterethomas!">
-    <div class="pt-72 pb-24 lg:pb-60" id="section-top">
+    <div class="bg-[url(/assets/backgrounds/background-1.jpg)] bg-cover bg-center pt-72 pb-24 lg:pb-60">
         <div class="wrapper">
             <div class="grid max-w-2xl gap-14 text-start text-xl md:px-10">
                 <div class="flex flex-col gap-2">
@@ -24,7 +24,10 @@ import LinkButton from "../components/LinkButton.astro";
         </div>
     </div>
 
-    <div class="py-24 lg:py-40" id="section-youtube">
+    <div
+        class="bg-[url(/assets/backgrounds/background-2.jpg)] bg-cover bg-center py-24 lg:py-40"
+        id="youtube"
+    >
         <div class="wrapper">
             <YouTube
                 class="min-w-full rounded-2xl shadow-md shadow-gray-800"
@@ -45,7 +48,10 @@ import LinkButton from "../components/LinkButton.astro";
         </div>
     </div>
 
-    <div class="py-24 lg:py-32" id="section-music">
+    <div
+        class="bg-[url(/assets/backgrounds/Ableton-live-it-doesnt-end-here.webp)] bg-cover bg-center py-24 lg:py-32"
+        id="music"
+    >
         <div class="wrapper">
             <div class="grid grid-rows-2 items-center text-start text-xl md:px-10 lg:grid-cols-2 lg:grid-rows-1 lg:gap-14">
                 <div class="flex flex-col gap-2">
@@ -94,7 +100,10 @@ import LinkButton from "../components/LinkButton.astro";
         </div>
     </div>
 
-    <div class="py-24 md:py-40" id="section-mod">
+    <div
+        class="bg-[url(/assets/backgrounds/Pancake-Mod.webp)] bg-cover bg-center py-24 md:py-40"
+        id="pancake-mod"
+    >
         <div class="wrapper">
             <div class="m-auto max-w-4xl items-center gap-14 text-center text-xl md:px-10">
                 <div class="flex flex-col gap-2">
@@ -119,7 +128,10 @@ import LinkButton from "../components/LinkButton.astro";
         </div>
     </div>
 
-    <div class="py-24 lg:py-40" id="section-github">
+    <div
+        class="bg-[url(/assets/backgrounds/GitHub-Rooster-EPD.webp)] bg-cover bg-top py-24 lg:py-40"
+        id="github"
+    >
         <div class="wrapper">
             <div class="items-center gap-14 text-center text-xl md:px-10">
                 <div class="flex w-full justify-center">
@@ -178,11 +190,16 @@ import LinkButton from "../components/LinkButton.astro";
         </div>
     </div>
 
-    <div class="py-24 xl:py-60" id="section-games">
+    <div
+        class="bg-[url(/assets/backgrounds/fnatc.png)] bg-cover bg-center py-24 xl:py-60"
+        id="games"
+    >
         <div class="wrapper">
             <div class="grid grid-rows-2 text-start text-xl md:gap-14 md:px-10 xl:grid-cols-2 xl:grid-rows-1">
                 <div class="flex flex-col gap-2 text-center xl:text-start">
-                    <h1 id="fnatc-title">Five Nights at the Cafe</h1>
+                    <h1 class="font-['Big_Shoulders_Stencil'] font-light not-italic">
+                        Five Nights at the Cafe
+                    </h1>
                     <p>
                         This is a Five Nights at Freddy's fangame that I've
                         made.
@@ -238,44 +255,3 @@ import LinkButton from "../components/LinkButton.astro";
         </div>
     </div>
 </BaseLayout>
-
-<style>
-    #section-top {
-        background: url("/assets/backgrounds/background-1.jpg") center center;
-        background-size: cover;
-    }
-
-    #section-youtube {
-        background: url("/assets/backgrounds/background-2.jpg") center center;
-        background-size: cover;
-    }
-
-    #section-music {
-        background: url("/assets/backgrounds/Ableton-live-it-doesnt-end-here.webp")
-            center center;
-        background-size: cover;
-    }
-
-    #section-mod {
-        background: url("/assets/backgrounds/Pancake-Mod.webp") center center;
-        background-size: cover;
-    }
-
-    #section-github {
-        background: url("/assets/backgrounds/GitHub-Rooster-EPD.webp") top
-            center;
-        background-size: cover;
-    }
-
-    #section-games {
-        background: url("/assets/backgrounds/fnatc.png") center center;
-        background-size: cover;
-    }
-
-    #fnatc-title {
-        font-family: "Big Shoulders Stencil", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 300;
-        font-style: normal;
-    }
-</style>
