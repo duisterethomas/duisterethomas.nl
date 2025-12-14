@@ -36,13 +36,13 @@
     }
 
     body {
-        @apply bg-black leading-[1.5] font-normal text-white antialiased text-shadow-gray-800 text-shadow-md;
+        @apply bg-black leading-normal font-normal text-white antialiased text-shadow-gray-800 text-shadow-md;
     }
 
     *,
     *::after,
     *::before {
-        @apply m-0 box-border transition duration-150;
+        @apply pointer-events-auto m-0 box-border transition duration-150;
     }
 
     img {
@@ -85,5 +85,5 @@
 
 /* Utilities */
 .wrapper {
-    @apply 3xl:max-w-[100rem] mx-auto w-full max-w-[83rem] px-6 wrap-anywhere;
+    @apply 3xl:max-w-400 mx-auto w-full max-w-332 px-6 wrap-anywhere;
 }
