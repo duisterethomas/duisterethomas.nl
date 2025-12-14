@@ -1,5 +1,4 @@
 ---
-import type { iconPaths } from "./IconPaths";
 import { socialLinks } from "./SocialLinks";
 import { Image } from "astro:assets";
 import LogoImage from "../images/Duisterethomas-Logo.png";
@@ -15,7 +14,7 @@ const textLinks: { label: string; href: string }[] = [
 const iconLinks: {
     label: string;
     href: string;
-    icon: keyof typeof iconPaths;
+    icon: string;
     color: string;
 }[] = [
     socialLinks["youtube"],
