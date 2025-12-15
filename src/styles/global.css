@@ -42,7 +42,7 @@
     *,
     *::after,
     *::before {
-        @apply pointer-events-auto m-0 box-border transition duration-150;
+        @apply pointer-events-auto m-0 box-border transition-all duration-150;
     }
 
     img {
