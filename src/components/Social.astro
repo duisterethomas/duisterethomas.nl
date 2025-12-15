@@ -5,12 +5,12 @@ const { href, icon, label, color } = Astro.props;
 ---
 
 <a
-    class="tooltip relative flex p-1.5 text-white hover:text-white focus:text-white"
+    class="group relative flex p-1.5 text-white hover:text-white focus:text-white"
     href={href}
     target="_blank"
 >
-    <span class="tooltiptext">{label}</span>
     <div class="icon"><Icon icon={icon} /></div>
+    <span class="tooltip pointer-events-none absolute left-1/2 -z-1 -translate-x-1/2 scale-x-0 rounded-full px-4 py-2 text-center text-sm text-nowrap opacity-0 text-shadow-none group-hover:translate-y-[110%] group-hover:scale-x-100 group-hover:opacity-100 group-hover:delay-500 group-focus:translate-y-[110%] group-focus:scale-x-100 group-focus:opacity-100 group-focus:delay-500">{label}</span>
 </a>
 
 <style define:vars={{ color }}>
@@ -25,17 +25,9 @@ const { href, icon, label, color } = Astro.props;
         @apply text-white;
     }
 
-    .tooltip .tooltiptext {
-        @apply pointer-events-none absolute top-full left-[50%] z-1 transform-[translateX(-50%)] rounded-md bg-black p-[5px] text-center text-sm opacity-0 text-shadow-none;
-    }
-
-    .tooltip .tooltiptext::after {
-        @apply absolute bottom-full left-[50%] ml-[-5px] border-[5px] border-solid content-[""];
-        border-color: transparent transparent #000 transparent;
-    }
-
-    .tooltip:hover .tooltiptext,
-    .tooltip:focus .tooltiptext {
-        @apply opacity-100 delay-500;
+    .tooltip {
+        background: url("/assets/backgrounds/noise.png") top center/220px repeat;
+        background-color: #00000080;
+        box-shadow: 0px 0px 4px #5d5d5d;
     }
 </style>
