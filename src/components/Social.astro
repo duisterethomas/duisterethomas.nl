@@ -10,7 +10,7 @@ const { href, icon, label, color } = Astro.props;
     target="_blank"
 >
     <div class="icon"><Icon icon={icon} /></div>
-    <span class="tooltip pointer-events-none absolute left-1/2 -z-1 -translate-x-1/2 scale-x-0 rounded-full px-4 py-2 text-center text-sm text-nowrap opacity-0 text-shadow-none group-hover:translate-y-[110%] group-hover:scale-x-100 group-hover:opacity-100 group-hover:delay-500 group-focus:translate-y-[110%] group-focus:scale-x-100 group-focus:opacity-100 group-focus:delay-500">{label}</span>
+    <span class="bg-noise-500 pointer-events-none absolute left-1/2 -z-1 -translate-x-1/2 scale-x-0 rounded-full px-4 py-2 text-center text-sm text-nowrap opacity-0 shadow-[0px_0px_4px_#5d5d5d] backdrop-blur-xl text-shadow-none group-hover:translate-y-[110%] group-hover:scale-x-100 group-hover:opacity-100 group-hover:delay-500 group-focus:translate-y-[110%] group-focus:scale-x-100 group-focus:opacity-100 group-focus:delay-500">{label}</span>
 </a>
 
 <style define:vars={{ color }}>
@@ -23,11 +23,5 @@ const { href, icon, label, color } = Astro.props;
     a:hover .icon,
     a:focus .icon {
         @apply text-white;
-    }
-
-    .tooltip {
-        background: url("/assets/backgrounds/noise.png") top center/220px repeat;
-        background-color: #00000080;
-        box-shadow: 0px 0px 4px #5d5d5d;
     }
 </style>
