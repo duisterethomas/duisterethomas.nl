@@ -12,14 +12,12 @@ import LinkButton from "../components/LinkButton.astro";
 <BaseLayout description="This is the official website of Duisterethomas!">
     <div class="bg-[url(/assets/backgrounds/background-1.jpg)] bg-cover bg-center pt-72 pb-24 lg:pb-60">
         <div class="wrapper">
-            <div class="grid max-w-2xl gap-14 text-start text-xl md:px-10">
-                <div class="flex flex-col gap-2">
-                    <h1>I do stuff...</h1>
-                    <p>
-                        Yeah that's basically it. You can find everything I
-                        share somewhere in here!
-                    </p>
-                </div>
+            <div class="flex max-w-2xl flex-col gap-2 text-start text-xl md:px-10">
+                <h1>I do stuff...</h1>
+                <p>
+                    Yeah that's basically it. You can find everything I share
+                    somewhere in here!
+                </p>
             </div>
         </div>
     </div>
@@ -53,8 +51,8 @@ import LinkButton from "../components/LinkButton.astro";
         id="music"
     >
         <div class="wrapper">
-            <div class="grid items-center text-start text-xl md:px-10 lg:grid-cols-2 lg:gap-14">
-                <div class="flex flex-col gap-2">
+            <div class="grid items-center text-center text-xl md:px-10 lg:grid-cols-2 lg:gap-14 lg:text-start">
+                <div class="flex flex-col items-center gap-2 lg:items-start">
                     <h1>My music</h1>
                     <p>
                         I often use my own music as background tracks in my <a
@@ -109,25 +107,23 @@ import LinkButton from "../components/LinkButton.astro";
         id="pancake-mod"
     >
         <div class="wrapper">
-            <div class="m-auto max-w-4xl items-center gap-14 text-center text-xl md:px-10">
-                <div class="flex flex-col gap-2">
-                    <h1>Pancake Mod</h1>
-                    <p>
-                        I've made a Minecraft mod, the <a
-                            href="https://modrinth.com/mod/pancakemod"
-                            >Pancake Mod</a
-                        >. It simply adds Dutch Pancakes to Minecraft. Why?
-                        Because some people (me) find it essential to have Dutch
-                        Pancakes in Minecraft.
-                    </p>
-                    <div class="mt-2 self-center">
-                        <LinkButton
-                            href={socialLinks["modrinth"]["href"]}
-                            newtab
-                            color={socialLinks["modrinth"]["color"]}
-                            icon={socialLinks["modrinth"]["icon"]}
-                            >My mods</LinkButton>
-                    </div>
+            <div class="m-auto flex max-w-4xl flex-col items-center gap-2 text-center text-xl md:px-10">
+                <h1>Pancake Mod</h1>
+                <p>
+                    I've made a Minecraft mod, the <a
+                        href="https://modrinth.com/mod/pancakemod"
+                        >Pancake Mod</a
+                    >. It simply adds Dutch Pancakes to Minecraft. Why? Because
+                    some people (me) find it essential to have Dutch Pancakes in
+                    Minecraft.
+                </p>
+                <div class="mt-2">
+                    <LinkButton
+                        href={socialLinks["modrinth"]["href"]}
+                        newtab
+                        color={socialLinks["modrinth"]["color"]}
+                        icon={socialLinks["modrinth"]["icon"]}
+                        >My mods</LinkButton>
                 </div>
             </div>
         </div>
@@ -138,22 +134,19 @@ import LinkButton from "../components/LinkButton.astro";
         id="github"
     >
         <div class="wrapper">
-            <div class="items-center gap-14 text-center text-xl md:px-10">
-                <div class="flex w-full justify-center">
-                    <div class="flex max-w-4xl flex-col gap-2">
-                        <h1>Coding</h1>
-                        <p>
-                            I do a little coding here and there, mostly just
-                            silly little things. But sometimes if I'm really
-                            proud of something, I'll share it on GitHub.
-                        </p>
-                    </div>
-                </div>
-                <div class="mt-12 grid gap-8 lg:grid-cols-3">
-                    <div class="flex flex-col justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700">
+            <div class="flex flex-col items-center justify-center gap-2 text-center text-xl md:px-10">
+                <h1>Coding</h1>
+                <p class="max-w-4xl">
+                    I do a little coding here and there, mostly just silly
+                    little things. But sometimes if I'm really proud of
+                    something, I'll share it on GitHub.
+                </p>
+
+                <div class="mt-10 grid gap-8 lg:grid-cols-3">
+                    <div class="flex flex-col items-center justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700">
                         <h4>duisterethomas.nl</h4>
                         <p>The source code of this website.</p>
-                        <div class="mt-2 self-center">
+                        <div class="my-2">
                             <LinkButton
                                 href="https://github.com/duisterethomas/duisterethomas.nl"
                                 newtab
@@ -163,13 +156,13 @@ import LinkButton from "../components/LinkButton.astro";
                         </div>
                     </div>
 
-                    <div class="flex flex-col justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700">
+                    <div class="flex flex-col items-center justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700">
                         <h4>Rooster-EPD</h4>
                         <p>
                             A small e-Paper device that shows your Zermelo
                             schedule.
                         </p>
-                        <div class="mt-2 self-center">
+                        <div class="my-2">
                             <LinkButton
                                 href="https://github.com/duisterethomas/rooster-epd"
                                 newtab
@@ -179,10 +172,10 @@ import LinkButton from "../components/LinkButton.astro";
                         </div>
                     </div>
 
-                    <div class="flex flex-col justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700">
+                    <div class="flex flex-col items-center justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700">
                         <h4>More...</h4>
                         <p>View all my repositories on GitHub.</p>
-                        <div class="mt-2 self-center">
+                        <div class="my-2">
                             <LinkButton
                                 href={socialLinks["github"]["href"]}
                                 newtab
@@ -201,8 +194,8 @@ import LinkButton from "../components/LinkButton.astro";
         id="games"
     >
         <div class="wrapper">
-            <div class="grid text-start text-xl md:gap-14 md:px-10 xl:grid-cols-2">
-                <div class="flex flex-col gap-2 text-center xl:text-start">
+            <div class="grid items-center justify-items-center text-start text-xl md:gap-14 md:px-10 xl:grid-cols-2">
+                <div class="flex flex-col items-center gap-2 text-center xl:items-start xl:text-start">
                     <h1 class="font-['Big_Shoulders_Stencil'] font-light not-italic">
                         Five Nights at the Cafe
                     </h1>
@@ -223,39 +216,35 @@ import LinkButton from "../components/LinkButton.astro";
                             target="_blank"
                             href="https://godotengine.org/">Godot</a>.
                     </p>
-                    <div class="mt-2 flex flex-col gap-4 self-center sm:flex-row xl:self-auto">
-                        <div class="mx-auto sm:mx-0">
-                            <LinkButton
-                                href={socialLinks["gamejolt"]["href"]}
-                                newtab
-                                color="#2f7f6f"
-                                icon={socialLinks["gamejolt"]["icon"]}
-                                >Game Jolt</LinkButton>
-                        </div>
-                        <div class="mx-auto sm:mx-0">
-                            <LinkButton
-                                href={socialLinks["itchio"]["href"]}
-                                newtab
-                                color={socialLinks["itchio"]["color"]}
-                                icon={socialLinks["itchio"]["icon"]}
-                                >Itch.io</LinkButton>
-                        </div>
+                    <div class="mt-2 flex flex-col items-center gap-4 sm:flex-row xl:self-auto">
+                        <LinkButton
+                            href={socialLinks["gamejolt"]["href"]}
+                            newtab
+                            color="#2f7f6f"
+                            icon={socialLinks["gamejolt"]["icon"]}
+                            >Game Jolt</LinkButton>
+                        <LinkButton
+                            href={socialLinks["itchio"]["href"]}
+                            newtab
+                            color={socialLinks["itchio"]["color"]}
+                            icon={socialLinks["itchio"]["icon"]}
+                            >Itch.io</LinkButton>
                     </div>
                 </div>
 
-                <div class="place-self-center pt-8 sm:hidden">
-                    <iframe
-                        src="https://widgets.gamejolt.com/package/v1?key=5x7FBTjB"
-                        width="350"
-                        height="245"></iframe>
-                </div>
+                <iframe
+                    class="pt-8 sm:hidden"
+                    src="https://widgets.gamejolt.com/package/v1?key=5x7FBTjB"
+                    width="350"
+                    height="245"
+                />
 
-                <div class="hidden place-self-center sm:block">
-                    <iframe
-                        src="https://widgets.gamejolt.com/package/v1?key=5x7FBTjB"
-                        width="430"
-                        height="245"></iframe>
-                </div>
+                <iframe
+                    class="hidden sm:block"
+                    src="https://widgets.gamejolt.com/package/v1?key=5x7FBTjB"
+                    width="430"
+                    height="245"
+                />
             </div>
         </div>
     </div>
