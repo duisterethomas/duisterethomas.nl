@@ -16,5 +16,5 @@ pnpm-debug.log*
 .env
 .env.production
 
-# vscode folder
-.vscode/
+# webstorm folder
+.idea/
