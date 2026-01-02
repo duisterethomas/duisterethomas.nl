@@ -2,7 +2,7 @@
  * Useful icon websites:
  * - Brand icons: https://simpleicons.org/
  * 
- * Adding a SVG icon
+ * Adding an SVG icon
  * 1. Find the icon you want
  * 2. Copy the SVG
  * 3. Paste the SVG code in https://www.svgviewer.dev/.
