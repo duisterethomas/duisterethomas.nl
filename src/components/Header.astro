@@ -42,7 +42,7 @@ const isCurrentPage = (href: string) => {
     >
         <Logo width="100" height="100" />
     </a>
-    <nav class="bg-noise-500 m-0 flex w-fit list-none gap-1.5 justify-self-center rounded-full p-2 text-sm leading-[1.2] bg-blend-overlay shadow-[0px_0px_4px_#5d5d5d] backdrop-blur-xl text-shadow-none">
+    <nav class="bg-noise-500 m-0 flex w-fit list-none gap-1.5 justify-self-center rounded-full p-2 text-sm leading-[1.2] shadow-[0px_0px_4px_#5d5d5d] backdrop-blur-xl text-shadow-none">
         {
             textLinks.map(({ label, href }) => (
                 <a
@@ -55,7 +55,7 @@ const isCurrentPage = (href: string) => {
             ))
         }
     </nav>
-    <div class="bg-noise-500 relative flex flex-row flex-nowrap justify-between justify-self-center rounded-full px-2 py-1 text-xl shadow-[0px_0px_4px_#5d5d5d] backdrop-blur-xl md:justify-self-end">
+    <div class="bg-noise-500 relative flex flex-row flex-nowrap justify-between justify-self-center rounded-full px-2 py-1 text-xl shadow-[0px_0px_4px_#5d5d5d] before:absolute before:inset-0 before:-z-1 before:h-full before:w-full before:rounded-full before:backdrop-blur-xl md:justify-self-end">
         {
             iconLinks.map(({ href, icon, label, color }) => (
                 <Social href={href} icon={icon} label={label} color={color} />
