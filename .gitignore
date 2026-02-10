@@ -1,5 +1,6 @@
 # build output
 dist/
+
 # generated types
 .astro/
 
@@ -16,5 +17,5 @@ pnpm-debug.log*
 .env
 .env.production
 
-# webstorm folder
-.idea/
+# macOS-specific files
+.DS_Store
