@@ -10,9 +10,9 @@ import LinkButton from "../components/LinkButton.astro";
 ---
 
 <BaseLayout description="This is the official website of Duisterethomas!">
-    <div class="bg-[url(/assets/backgrounds/background-1.jpg)] bg-cover bg-center pt-72 pb-24 lg:pb-60">
+    <div class="bg-[url(/assets/backgrounds/background-1.jpg)] bg-cover bg-center pt-78 pb-18 lg:pt-72 lg:pb-60">
         <div class="wrapper">
-            <div class="flex max-w-2xl flex-col gap-2 text-start md:px-10">
+            <div class="flex max-w-2xl flex-col gap-2 text-start">
                 <h1>I do stuff...</h1>
                 <p class="text-xl md:text-2xl">
                     Yeah that's basically it. You can find everything I share
@@ -23,56 +23,59 @@ import LinkButton from "../components/LinkButton.astro";
     </div>
 
     <div
-        class="bg-[url(/assets/backgrounds/background-2.jpg)] bg-cover bg-center py-24 lg:py-40"
+        class="bg-[url(/assets/backgrounds/background-2.jpg)] bg-cover bg-center py-18 lg:py-40"
         id="youtube"
     >
         <div class="wrapper">
-            <YouTube
-                class="min-w-full rounded-2xl shadow-md shadow-gray-800"
-                id="https://www.youtube.com/watch?v=l2IrsPJsvtk"
-                posterQuality="max"
-            />
-            <div class="mt-4 flex flex-col gap-4 text-center md:flex-row md:text-start">
-                <h3 class="my-auto">My most recent YouTube video</h3>
-                <div class="mx-auto md:mr-0">
-                    <LinkButton
-                        href={socialLinks["youtube"]["href"]}
-                        newtab
-                        color={socialLinks["youtube"]["color"]}
-                        icon={socialLinks["youtube"]["icon"]}
-                        >Subscribe</LinkButton>
+            <div class="md:px-12">
+                <YouTube
+                    class="min-w-full rounded-2xl shadow-md shadow-gray-800"
+                    id="https://www.youtube.com/watch?v=l2IrsPJsvtk"
+                    posterQuality="max"
+                />
+                <div class="mt-4 flex flex-col gap-4 text-center md:flex-row md:text-start">
+                    <h3 class="my-auto">My latest YouTube video</h3>
+                    <div class="mx-auto md:mr-0">
+                        <LinkButton
+                            href={socialLinks["youtube"]["href"]}
+                            newtab
+                            color={socialLinks["youtube"]["color"]}
+                            icon={socialLinks["youtube"]["icon"]}
+                            >Subscribe</LinkButton>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <div
-        class="bg-[url(/assets/backgrounds/Ableton-live-it-doesnt-end-here.webp)] bg-cover bg-center py-24 lg:py-32"
+        class="bg-[url(/assets/backgrounds/Ableton-live-it-doesnt-end-here.webp)] bg-cover bg-center py-18 lg:py-32"
         id="music"
     >
         <div class="wrapper">
-            <div class="grid items-center text-center md:px-10 lg:grid-cols-2 lg:gap-14 lg:text-start">
-                <div class="flex flex-col items-center gap-2 lg:items-start">
+            <div class="flex flex-col items-center gap-14 text-center lg:flex-row lg:text-start">
+                <div class="flex flex-auto flex-col items-center gap-2 lg:flex-1 lg:items-start">
                     <h1>My music</h1>
                     <p class="text-xl md:text-2xl">
                         I often use my own music as background tracks in my <a
                             href={socialLinks["youtube"]["href"]}
-                            >YouTube videos</a>. The DAW I use is
+                            >YouTube videos</a
+                        >. The DAW I use is
                         <a
                             target="_blank"
                             href="https://www.ableton.com/en/live/"
-                            >Ableton Live 12</a>.
+                            >Ableton Live 12</a
+                        >.
                     </p>
                     <LinkButton
                         href={socialLinks["soundcloud"]["href"]}
                         newtab
                         color={socialLinks["soundcloud"]["color"]}
                         icon={socialLinks["soundcloud"]["icon"]}
-                        >More music</LinkButton
-                    >
+                        >More music</LinkButton>
                 </div>
 
-                <div class="flex flex-col gap-5 pt-12 lg:pt-0">
+                <div class="flex w-full flex-auto flex-col gap-5 lg:flex-1">
                     <iframe
                         width="100%"
                         height="166"
@@ -103,11 +106,11 @@ import LinkButton from "../components/LinkButton.astro";
     </div>
 
     <div
-        class="bg-[url(/assets/backgrounds/Pancake-Mod.webp)] bg-cover bg-center py-24 md:py-40"
+        class="bg-[url(/assets/backgrounds/Pancake-Mod.webp)] bg-cover bg-center py-18 md:py-40"
         id="pancake-mod"
     >
         <div class="wrapper">
-            <div class="m-auto flex max-w-4xl flex-col items-center gap-2 text-center md:px-10">
+            <div class="m-auto flex max-w-4xl flex-col items-center gap-2 text-center">
                 <h1>Pancake Mod</h1>
                 <p class="text-xl md:text-2xl">
                     I've made a Minecraft mod, the <a
@@ -130,11 +133,11 @@ import LinkButton from "../components/LinkButton.astro";
     </div>
 
     <div
-        class="bg-[url(/assets/backgrounds/GitHub-Rooster-EPD.webp)] bg-cover bg-top py-24 lg:py-40"
+        class="bg-[url(/assets/backgrounds/GitHub-Rooster-EPD.webp)] bg-cover bg-top py-18 lg:py-40"
         id="github"
     >
         <div class="wrapper">
-            <div class="flex flex-col items-center justify-center gap-2 text-center md:px-10">
+            <div class="flex flex-col items-center justify-center gap-2 text-center">
                 <h1>Coding</h1>
                 <p class="max-w-4xl text-xl md:text-2xl">
                     I do a little coding here and there, mostly just silly
@@ -142,8 +145,8 @@ import LinkButton from "../components/LinkButton.astro";
                     something, I'll share it on GitHub.
                 </p>
 
-                <div class="mt-10 grid gap-8 lg:grid-cols-3 text-lg md:text-xl">
-                    <div class="flex flex-col items-center justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700">
+                <div class="mt-10 grid gap-8 text-lg md:text-xl lg:grid-cols-3">
+                    <div class="flex flex-col items-center justify-center rounded-3xl bg-black px-9 py-11 text-center outline-1 outline-neutral-700">
                         <h3>Buckshot-Counter</h3>
                         <p>A simple counter/notes app for Buckshot Roulette.</p>
                         <div class="my-2">
@@ -156,7 +159,7 @@ import LinkButton from "../components/LinkButton.astro";
                         </div>
                     </div>
 
-                    <div class="flex flex-col items-center justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700">
+                    <div class="flex flex-col items-center justify-center rounded-3xl bg-black px-9 py-11 text-center outline-1 outline-neutral-700">
                         <h3>Rooster-EPD</h3>
                         <p>
                             A small e-Paper device that shows your Zermelo
@@ -172,7 +175,7 @@ import LinkButton from "../components/LinkButton.astro";
                         </div>
                     </div>
 
-                    <div class="flex flex-col items-center justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700">
+                    <div class="flex flex-col items-center justify-center rounded-3xl bg-black px-9 py-11 text-center outline-1 outline-neutral-700">
                         <h3>More...</h3>
                         <p>View all my repositories on GitHub.</p>
                         <div class="my-2">
@@ -190,12 +193,12 @@ import LinkButton from "../components/LinkButton.astro";
     </div>
 
     <div
-        class="bg-[url(/assets/backgrounds/fnatc.png)] bg-cover bg-center py-24 xl:py-60"
+        class="bg-[url(/assets/backgrounds/fnatc.png)] bg-cover bg-center py-18 xl:py-54"
         id="games"
     >
         <div class="wrapper">
-            <div class="grid items-center justify-items-center text-start md:gap-14 md:px-10 xl:grid-cols-2">
-                <div class="flex flex-col items-center gap-2 text-center xl:items-start xl:text-start">
+            <div class="flex flex-col items-center justify-items-center gap-14 text-start xl:flex-row">
+                <div class="flex flex-auto flex-col items-center gap-2 text-center xl:flex-1 xl:items-start xl:text-start">
                     <h1 class="font-['Big_Shoulders_Stencil'] font-light not-italic">
                         Five Nights at the Cafe
                     </h1>
@@ -233,14 +236,7 @@ import LinkButton from "../components/LinkButton.astro";
                 </div>
 
                 <iframe
-                    class="pt-8 sm:hidden"
-                    src="https://widgets.gamejolt.com/package/v1?key=5x7FBTjB"
-                    width="350"
-                    height="245"
-                />
-
-                <iframe
-                    class="hidden sm:block"
+                    class="max-w-full flex-auto sm:flex-1"
                     src="https://widgets.gamejolt.com/package/v1?key=5x7FBTjB"
                     width="430"
                     height="245"
@@ -249,7 +245,7 @@ import LinkButton from "../components/LinkButton.astro";
         </div>
     </div>
 
-    <div class="py-20">
+    <div class="py-10 md:py-18">
         <div class="wrapper">
             <div class="gap-14 text-center">
                 <p class="text-lg md:text-xl">

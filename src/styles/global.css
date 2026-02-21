@@ -75,7 +75,7 @@
 /* Utilities */
 @layer utilities {
     .wrapper {
-        @apply 3xl:max-w-400 mx-auto w-full max-w-340 px-6 wrap-anywhere;
+        @apply 3xl:max-w-400 mx-auto w-full max-w-330 px-6 wrap-anywhere;
     }
 
     .bg-noise-500 {
