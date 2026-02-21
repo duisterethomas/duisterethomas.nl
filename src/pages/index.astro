@@ -12,9 +12,9 @@ import LinkButton from "../components/LinkButton.astro";
 <BaseLayout description="This is the official website of Duisterethomas!">
     <div class="bg-[url(/assets/backgrounds/background-1.jpg)] bg-cover bg-center pt-72 pb-24 lg:pb-60">
         <div class="wrapper">
-            <div class="flex max-w-2xl flex-col gap-2 text-start text-xl md:px-10">
+            <div class="flex max-w-2xl flex-col gap-2 text-start md:px-10">
                 <h1>I do stuff...</h1>
-                <p>
+                <p class="text-xl md:text-2xl">
                     Yeah that's basically it. You can find everything I share
                     somewhere in here!
                 </p>
@@ -33,7 +33,7 @@ import LinkButton from "../components/LinkButton.astro";
                 posterQuality="max"
             />
             <div class="mt-4 flex flex-col gap-4 text-center md:flex-row md:text-start">
-                <h4 class="my-auto">My most recent YouTube video</h4>
+                <h3 class="my-auto">My most recent YouTube video</h3>
                 <div class="mx-auto md:mr-0">
                     <LinkButton
                         href={socialLinks["youtube"]["href"]}
@@ -51,13 +51,13 @@ import LinkButton from "../components/LinkButton.astro";
         id="music"
     >
         <div class="wrapper">
-            <div class="grid items-center text-center text-xl md:px-10 lg:grid-cols-2 lg:gap-14 lg:text-start">
+            <div class="grid items-center text-center md:px-10 lg:grid-cols-2 lg:gap-14 lg:text-start">
                 <div class="flex flex-col items-center gap-2 lg:items-start">
                     <h1>My music</h1>
-                    <p>
+                    <p class="text-xl md:text-2xl">
                         I often use my own music as background tracks in my <a
                             href={socialLinks["youtube"]["href"]}
-                            >YouTube videos</a>. The DAW I use is 
+                            >YouTube videos</a>. The DAW I use is
                         <a
                             target="_blank"
                             href="https://www.ableton.com/en/live/"
@@ -107,9 +107,9 @@ import LinkButton from "../components/LinkButton.astro";
         id="pancake-mod"
     >
         <div class="wrapper">
-            <div class="m-auto flex max-w-4xl flex-col items-center gap-2 text-center text-xl md:px-10">
+            <div class="m-auto flex max-w-4xl flex-col items-center gap-2 text-center md:px-10">
                 <h1>Pancake Mod</h1>
-                <p>
+                <p class="text-xl md:text-2xl">
                     I've made a Minecraft mod, the <a
                         href="https://modrinth.com/mod/pancakemod"
                         >Pancake Mod</a
@@ -134,17 +134,17 @@ import LinkButton from "../components/LinkButton.astro";
         id="github"
     >
         <div class="wrapper">
-            <div class="flex flex-col items-center justify-center gap-2 text-center text-xl md:px-10">
+            <div class="flex flex-col items-center justify-center gap-2 text-center md:px-10">
                 <h1>Coding</h1>
-                <p class="max-w-4xl">
+                <p class="max-w-4xl text-xl md:text-2xl">
                     I do a little coding here and there, mostly just silly
                     little things. But sometimes, if I'm really proud of
                     something, I'll share it on GitHub.
                 </p>
 
-                <div class="mt-10 grid gap-8 lg:grid-cols-3">
+                <div class="mt-10 grid gap-8 lg:grid-cols-3 text-lg md:text-xl">
                     <div class="flex flex-col items-center justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700">
-                        <h4>Buckshot-Counter</h4>
+                        <h3>Buckshot-Counter</h3>
                         <p>A simple counter/notes app for Buckshot Roulette.</p>
                         <div class="my-2">
                             <LinkButton
@@ -157,7 +157,7 @@ import LinkButton from "../components/LinkButton.astro";
                     </div>
 
                     <div class="flex flex-col items-center justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700">
-                        <h4>Rooster-EPD</h4>
+                        <h3>Rooster-EPD</h3>
                         <p>
                             A small e-Paper device that shows your Zermelo
                             schedule.
@@ -173,7 +173,7 @@ import LinkButton from "../components/LinkButton.astro";
                     </div>
 
                     <div class="flex flex-col items-center justify-center rounded-3xl bg-black px-9 py-12 text-center outline-1 outline-neutral-700">
-                        <h4>More...</h4>
+                        <h3>More...</h3>
                         <p>View all my repositories on GitHub.</p>
                         <div class="my-2">
                             <LinkButton
@@ -194,12 +194,12 @@ import LinkButton from "../components/LinkButton.astro";
         id="games"
     >
         <div class="wrapper">
-            <div class="grid items-center justify-items-center text-start text-xl md:gap-14 md:px-10 xl:grid-cols-2">
+            <div class="grid items-center justify-items-center text-start md:gap-14 md:px-10 xl:grid-cols-2">
                 <div class="flex flex-col items-center gap-2 text-center xl:items-start xl:text-start">
                     <h1 class="font-['Big_Shoulders_Stencil'] font-light not-italic">
                         Five Nights at the Cafe
                     </h1>
-                    <p>
+                    <p class="text-xl md:text-2xl">
                         This is a Five Nights at Freddy's fangame I've made. It
                         started out in <a
                             target="_blank"
@@ -251,8 +251,8 @@ import LinkButton from "../components/LinkButton.astro";
 
     <div class="py-20">
         <div class="wrapper">
-            <div class="gap-14 text-center text-xl md:px-10">
-                <p>
+            <div class="gap-14 text-center">
+                <p class="text-lg md:text-xl">
                     P.S. my merch is not for sale.<br />Can't take no for an
                     answer? Send an e-mail to <a
                         href="mailto:iwantmerch@duisterethomas.nl"
