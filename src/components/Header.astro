@@ -47,10 +47,14 @@ const isCurrentPage = (href: string) => {
             textLinks.map(({ label, href }) => (
                 <a
                     aria-current={isCurrentPage(href) ? "page" : null}
-                    class="aria-[current=page]:bg-accent-regular hover:bg-accent-overlay focus:bg-accent-overlay rounded-full px-3.5 py-2.5 text-gray-300 hover:text-gray-100 focus:text-gray-100 aria-[current=page]:text-white"
+                    class="relative group leading-4 rounded-full px-3.5 py-2.5 text-gray-300 hover:text-gray-100 focus:text-gray-100 aria-[current=page]:text-white"
                     href={href}
                 >
-                    {label}
+                    <span class="relative z-10">{label}</span>
+                    <div
+                        aria-current={isCurrentPage(href) ? "page" : null}
+                        class="aria-[current=page]:bg-accent-regular aria-[current=page]:scale-100 absolute inset-0 bg-accent-overlay rounded-full scale-0 ease-out group-hover:scale-100 group-focus:scale-100"
+                    />
                 </a>
             ))
         }
