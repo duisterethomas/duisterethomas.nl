@@ -11,9 +11,9 @@
   "dependencies": {
     "@astro-community/astro-embed-youtube": "^0.5.10",
     "@astrojs/sitemap": "^3.7.3",
-    "@tailwindcss/vite": "^4.2.2",
+    "@tailwindcss/vite": "^4.3.1",
     "astro": "^7.0.2",
-    "tailwindcss": "^4.2.2"
+    "tailwindcss": "^4.3.1"
   },
   "devDependencies": {
     "prettier": "3.5.3",
