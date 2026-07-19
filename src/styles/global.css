@@ -43,6 +43,10 @@
         @apply text-accent-light;
     }
 
+	iframe:focus {
+		@apply outline-none
+	}
+
     h1,
     h2,
     h3,
