@@ -1,7 +1,7 @@
 /**
  * Useful icon websites:
  * - Brand icons: https://simpleicons.org/
- * 
+ *
  * Adding an SVG icon
  * 1. Find the icon you want
  * 2. Copy the SVG
@@ -22,6 +22,12 @@ export const socialLinks: Record<
         icon: '<path d="M250.645 65.984a32.213 32.213 0 0 0 -22.635 -22.784C208.053 37.813 128 37.813 128 37.813s-80.053 0 -100.021 5.387A32.213 32.213 0 0 0 5.355 65.984C0 86.08 0 128 0 128s0 41.92 5.355 62.016a32.213 32.213 0 0 0 22.635 22.784c19.957 5.387 100.011 5.387 100.011 5.387s80.053 0 100.021 -5.387a32.213 32.213 0 0 0 22.635 -22.784C256 169.92 256 128 256 128s0 -41.92 -5.355 -62.016M101.813 166.059V89.941L168.725 128z"/>',
         color: "#FF0000",
     },
+	bandcamp: {
+		label: "Bandcamp",
+		href: "https://duisterethomas.bandcamp.com",
+		icon: '<path d="m0 200 79.328 -144H256l-79.339 144z"/>',
+		color: "#408294",
+	},
     soundcloud: {
         label: "SoundCloud",
         href: "https://soundcloud.com/duisterethomas",

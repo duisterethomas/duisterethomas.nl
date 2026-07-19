@@ -64,41 +64,29 @@ import LinkButton from "../components/LinkButton.astro";
                             target="_blank"
                             href="https://www.ableton.com/en/live/"
                             >Ableton Live 12</a
-                        >.
+						>. You can stream or download my music on Bandcamp and SoundCloud!
                     </p>
-                    <LinkButton
-                        href={socialLinks["soundcloud"]["href"]}
-                        newtab
-                        color={socialLinks["soundcloud"]["color"]}
-                        icon={socialLinks["soundcloud"]["icon"]}
-                        >More music</LinkButton>
+					<p class="text-lg md:text-md text-gray-300 italic">Not all of my music is available on Bandcamp yet as I'm still working on getting my older songs re-exported to high quality formats.</p>
+                    <div class="mt-2 flex flex-col items-center gap-4 sm:flex-row xl:self-auto">
+						<LinkButton
+							href={socialLinks["bandcamp"]["href"]}
+							newtab
+							color={socialLinks["bandcamp"]["color"]}
+							icon={socialLinks["bandcamp"]["icon"]}
+							>Bandcamp</LinkButton>
+						<LinkButton
+							href={socialLinks["soundcloud"]["href"]}
+							newtab
+							color={socialLinks["soundcloud"]["color"]}
+							icon={socialLinks["soundcloud"]["icon"]}
+							>SoundCloud</LinkButton>
+					</div>
                 </div>
 
-                <div class="flex w-full flex-auto flex-col gap-5 lg:flex-1">
-                    <iframe
-                        width="100%"
-                        height="166"
-                        scrolling="no"
-                        frameborder="no"
-                        allow="autoplay"
-                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2300710577&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-                    />
-                    <iframe
-                        width="100%"
-                        height="166"
-                        scrolling="no"
-                        frameborder="no"
-                        allow="autoplay"
-                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2217255239&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-                    />
-                    <iframe
-                        width="100%"
-                        height="166"
-                        scrolling="no"
-                        frameborder="no"
-                        allow="autoplay"
-                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1987020695&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-                    />
+                <div class="flex w-full max-w-175 flex-auto flex-col gap-5 items-center lg:flex-1">
+					<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=2654921924/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://duisterethomas.bandcamp.com/track/dawn-over-the-mountains">Dawn Over The Mountains by Duisterethomas</a></iframe>
+                    <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=3755214954/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://duisterethomas.bandcamp.com/track/electric-heart">Electric Heart by Duisterethomas</a></iframe>
+                    <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=2443663609/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://duisterethomas.bandcamp.com/track/path-to-the-future">Path to the Future by Duisterethomas</a></iframe>
                 </div>
             </div>
         </div>
